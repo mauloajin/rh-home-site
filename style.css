@@ -231,8 +231,18 @@ color:#fff;
 overflow:hidden;
 }
 
+/* SERVICE SECTION */
+
 .section-dark{
-background:linear-gradient(145deg,#0a0a0a 0%,#181818 100%);
+background:
+linear-gradient(rgba(10,10,10,.96),rgba(18,18,18,.96)),
+repeating-linear-gradient(
+135deg,
+rgba(255,255,255,.025) 0px,
+rgba(255,255,255,.025) 1px,
+transparent 1px,
+transparent 22px
+);
 }
 
 /* TITLE */
