@@ -38,9 +38,9 @@ display:flex;
 justify-content:space-between;
 align-items:center;
 padding:22px 5%;
-background:rgba(0,0,0,.82);
-backdrop-filter:blur(16px);
-border-bottom:1px solid rgba(255,255,255,.08);
+background:rgba(0,0,0,0);
+backdrop-filter:none;
+border-bottom:1px solid rgba(255,255,255,.06);
 }
 
 .logo{
@@ -473,13 +473,166 @@ height:180px;
 }
 
 @media(max-width:1100px){
-.nav,.tel{display:none;}
-.logo{font-size:32px;}
-.hero h1{font-size:38px;}
-.grid-4,.grid-3,.flow{grid-template-columns:1fr;}
-.work{height:380px;}
-.section{padding:90px 5%;}
-.section-title h2{font-size:30px;}
-.cta h2{font-size:30px;}
-.footer{flex-direction:column;}
+
+.nav,
+.tel{
+display:none;
+}
+
+.logo{
+font-size:28px;
+}
+
+.logo span{
+font-size:9px;
+margin-top:6px;
+}
+
+.header{
+padding:18px 5%;
+}
+
+.hero{
+padding:120px 5% 70px;
+min-height:100vh;
+}
+
+.hero-sub{
+font-size:11px;
+line-height:1.8;
+letter-spacing:.1em;
+margin-bottom:22px;
+}
+
+.hero-line{
+width:60px;
+margin-bottom:26px;
+}
+
+.hero h1{
+font-size:30px;
+line-height:1.55;
+letter-spacing:.08em;
+margin-bottom:26px;
+}
+
+.hero p{
+font-size:13px;
+line-height:2;
+letter-spacing:.04em;
+margin-bottom:34px;
+}
+
+.buttons{
+flex-direction:column;
+gap:14px;
+}
+
+.btn{
+width:100%;
+min-width:auto;
+padding:14px 20px;
+font-size:12px;
+}
+
+.grid-4,
+.grid-3,
+.flow{
+grid-template-columns:1fr;
+}
+
+.work{
+height:340px;
+}
+
+.image-card img{
+height:220px;
+}
+
+.section{
+padding:90px 5%;
+}
+
+.section-title{
+margin-bottom:50px;
+}
+
+.section-title small{
+font-size:11px;
+margin-bottom:12px;
+}
+
+.section-title h2{
+font-size:28px;
+line-height:1.6;
+}
+
+.card,
+.image-card-body,
+.flow-item{
+padding:28px 22px;
+}
+
+.card h3,
+.image-card-body h3,
+.work-overlay h3,
+.flow-item h3{
+font-size:20px;
+}
+
+.card p,
+.image-card-body p,
+.work-overlay p,
+.flow-item p{
+font-size:13px;
+line-height:2;
+}
+
+.work-overlay{
+padding:24px;
+}
+
+.page-hero{
+padding:150px 5% 80px;
+}
+
+.page-hero h1{
+font-size:30px;
+line-height:1.5;
+}
+
+.text-box p{
+font-size:14px;
+line-height:2.4;
+}
+
+.cta{
+padding:100px 5%;
+}
+
+.cta h2{
+font-size:28px;
+line-height:1.7;
+}
+
+.cta p{
+font-size:13px;
+line-height:2;
+}
+
+.footer{
+flex-direction:column;
+padding:50px 5%;
+gap:30px;
+}
+
+.footer-logo{
+font-size:28px;
+}
+
+.footer p{
+font-size:12px;
+line-height:2;
+}
+
 }
