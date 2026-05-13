@@ -6,15 +6,18 @@ box-sizing:border-box;
 
 html{
 scroll-behavior:smooth;
+overflow-x:hidden;
 }
 
 body{
 font-family:"Noto Serif JP",serif;
 background:#050505;
-color:#fff;
+color:#111;
 line-height:2;
 letter-spacing:.06em;
 overflow-x:hidden;
+width:100%;
+max-width:100%;
 }
 
 a{
@@ -33,14 +36,18 @@ position:fixed;
 top:0;
 left:0;
 width:100%;
+max-width:100%;
 z-index:999;
 display:flex;
 justify-content:space-between;
 align-items:center;
+gap:30px;
 padding:22px 5%;
 background:rgba(0,0,0,0);
 backdrop-filter:none;
 border-bottom:1px solid rgba(255,255,255,.06);
+color:#fff;
+overflow:hidden;
 }
 
 .logo{
@@ -48,22 +55,25 @@ font-size:38px;
 font-weight:600;
 letter-spacing:.16em;
 line-height:1;
+flex-shrink:0;
 }
 
 .logo span{
 display:block;
 font-size:11px;
 font-weight:400;
-color:#aaa;
+color:#ddd;
 margin-top:10px;
 letter-spacing:.14em;
 }
 
 .nav{
 display:flex;
-gap:34px;
+gap:30px;
 font-size:13px;
-letter-spacing:.14em;
+letter-spacing:.12em;
+white-space:nowrap;
+min-width:0;
 }
 
 .nav a{
@@ -86,9 +96,11 @@ width:100%;
 }
 
 .tel{
-font-size:28px;
+font-size:26px;
 font-weight:500;
-letter-spacing:.08em;
+letter-spacing:.06em;
+white-space:nowrap;
+flex-shrink:0;
 }
 
 .hero{
@@ -98,6 +110,7 @@ display:flex;
 align-items:center;
 padding:140px 5% 80px;
 overflow:hidden;
+color:#fff;
 }
 
 .hero::before{
@@ -127,6 +140,7 @@ to{transform:scale(1.1);}
 position:relative;
 z-index:2;
 max-width:720px;
+width:100%;
 }
 
 .hero-sub{
@@ -179,6 +193,7 @@ min-width:210px;
 .btn.primary{
 background:#f2eee8;
 color:#111;
+border-color:#f2eee8;
 }
 
 .btn:hover{
@@ -189,10 +204,14 @@ transform:translateY(-2px);
 
 .section{
 padding:120px 5%;
+background:#f4f1ec;
+color:#111;
+overflow:hidden;
 }
 
 .section-dark{
 background:#101010;
+color:#fff;
 }
 
 .section-title{
@@ -204,8 +223,12 @@ margin-bottom:76px;
 display:block;
 font-size:13px;
 letter-spacing:.32em;
-color:#888;
+color:#777;
 margin-bottom:16px;
+}
+
+.section-dark .section-title small{
+color:#888;
 }
 
 .section-title h2{
@@ -218,51 +241,66 @@ letter-spacing:.14em;
 display:grid;
 grid-template-columns:repeat(4,1fr);
 gap:24px;
+width:100%;
+max-width:100%;
 }
 
 .grid-3{
 display:grid;
 grid-template-columns:repeat(3,1fr);
 gap:26px;
+width:100%;
+max-width:100%;
 }
 
 .card{
-background:linear-gradient(145deg,#161616,#0d0d0d);
-border:1px solid rgba(255,255,255,.08);
-padding:42px 30px;
+background:#fff;
+border:1px solid rgba(0,0,0,.08);
+padding:0 0 34px;
 transition:.4s;
+overflow:hidden;
 }
 
 .card:hover{
 transform:translateY(-8px);
-border-color:#666;
+border-color:#aaa;
+}
+
+.card img{
+width:100%;
+height:220px;
+object-fit:cover;
+display:block;
+margin-bottom:26px;
 }
 
 .card-number{
 font-size:14px;
-color:#888;
-margin-bottom:18px;
+color:#777;
+margin:0 28px 14px;
 letter-spacing:.2em;
 }
 
 .card h3{
-font-size:22px;
+font-size:21px;
 font-weight:500;
-margin-bottom:18px;
-letter-spacing:.1em;
+margin:0 28px 16px;
+letter-spacing:.08em;
 }
 
 .card p{
 font-size:14px;
-color:#aaa;
-line-height:2.2;
+color:#555;
+line-height:2.1;
+margin:0 28px;
 }
 
 .image-card{
 overflow:hidden;
-background:#111;
+background:#151515;
 border:1px solid rgba(255,255,255,.08);
 transition:.4s;
+color:#fff;
 }
 
 .image-card:hover{
@@ -300,12 +338,13 @@ line-height:2.2;
 position:relative;
 overflow:hidden;
 height:460px;
+background:#111;
 }
 
 .work img{
 height:100%;
 transition:1.2s;
-filter:brightness(.78);
+filter:brightness(.8);
 }
 
 .work:hover img{
@@ -320,6 +359,7 @@ bottom:0;
 width:100%;
 padding:36px;
 background:linear-gradient(transparent,rgba(0,0,0,.92));
+color:#fff;
 }
 
 .work-overlay h3{
@@ -339,6 +379,7 @@ background:
 linear-gradient(rgba(0,0,0,.82),rgba(0,0,0,.88)),
 url("main.jpg") center/cover no-repeat;
 text-align:center;
+color:#fff;
 }
 
 .page-hero small{
@@ -362,9 +403,13 @@ text-align:center;
 
 .text-box p{
 font-size:16px;
-color:#ccc;
+color:#333;
 line-height:2.8;
 margin-bottom:24px;
+}
+
+.section-dark .text-box p{
+color:#ccc;
 }
 
 .flow{
@@ -406,6 +451,8 @@ text-align:center;
 background:
 linear-gradient(rgba(0,0,0,.82),rgba(0,0,0,.9)),
 url("room.jpg") center/cover no-repeat;
+color:#fff;
+overflow:hidden;
 }
 
 .cta h2{
@@ -429,6 +476,8 @@ border-top:1px solid rgba(255,255,255,.08);
 display:flex;
 justify-content:space-between;
 gap:40px;
+color:#fff;
+overflow:hidden;
 }
 
 .footer-logo{
@@ -570,7 +619,12 @@ line-height:1.6;
 .card,
 .image-card-body,
 .flow-item{
-padding:28px 22px;
+padding:0 0 28px;
+}
+
+.card img{
+height:210px;
+margin-bottom:24px;
 }
 
 .card h3,
@@ -635,11 +689,4 @@ font-size:12px;
 line-height:2;
 }
 
-}
-.card img{
-width:100%;
-height:220px;
-object-fit:cover;
-display:block;
-margin-bottom:20px;
 }
