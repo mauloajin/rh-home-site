@@ -15,6 +15,10 @@ padding:0;
 box-sizing:border-box;
 }
 
+html{
+scroll-behavior:smooth;
+}
+
 body{
 font-family:"Noto Serif JP",serif;
 background:#070707;
@@ -41,18 +45,18 @@ top:0;
 left:0;
 width:100%;
 z-index:999;
-padding:22px 5%;
+padding:20px 5%;
 display:flex;
 justify-content:space-between;
 align-items:center;
-background:rgba(0,0,0,.76);
+background:rgba(0,0,0,.82);
 backdrop-filter:blur(14px);
-border-bottom:1px solid rgba(255,255,255,.08);
+border-bottom:1px solid rgba(255,255,255,.1);
 }
 
 .logo{
 font-family:"Cormorant Garamond",serif;
-font-size:44px;
+font-size:42px;
 font-weight:600;
 letter-spacing:.13em;
 line-height:1;
@@ -76,19 +80,23 @@ letter-spacing:.12em;
 color:#ddd;
 }
 
+.nav a:hover{
+color:#fff;
+}
+
 .tel{
 font-family:"Cormorant Garamond",serif;
-font-size:34px;
+font-size:30px;
 font-weight:500;
 letter-spacing:.06em;
 }
 
 .hero{
-height:100vh;
+min-height:100vh;
 position:relative;
 display:flex;
 align-items:center;
-padding:0 5%;
+padding:140px 5% 80px;
 overflow:hidden;
 }
 
@@ -97,36 +105,36 @@ content:"";
 position:absolute;
 inset:0;
 background:
-linear-gradient(90deg,rgba(0,0,0,.88) 0%,rgba(0,0,0,.58) 45%,rgba(0,0,0,.22) 100%),
+linear-gradient(90deg,rgba(0,0,0,.88) 0%,rgba(0,0,0,.62) 45%,rgba(0,0,0,.3) 100%),
 url("main.jpg") center/cover no-repeat;
-transform:scale(1.05);
+transform:scale(1.04);
 animation:zoom 13s ease-in-out infinite alternate;
 }
 
 @keyframes zoom{
-from{transform:scale(1.05);}
-to{transform:scale(1.12);}
+from{transform:scale(1.04);}
+to{transform:scale(1.1);}
 }
 
 .hero-inner{
 position:relative;
 z-index:2;
-max-width:760px;
+max-width:720px;
 }
 
 .hero-sub{
-font-size:15px;
-letter-spacing:.16em;
+font-size:14px;
+letter-spacing:.14em;
 color:#d0d0d0;
-margin-bottom:26px;
+margin-bottom:24px;
 }
 
 .hero h1{
-font-size:clamp(52px,7vw,108px);
-line-height:1.18;
+font-size:clamp(42px,5.5vw,78px);
+line-height:1.35;
 margin-bottom:30px;
 font-weight:500;
-letter-spacing:.09em;
+letter-spacing:.08em;
 }
 
 .hero p{
@@ -163,6 +171,7 @@ color:#111;
 
 .section{
 padding:120px 5%;
+scroll-margin-top:100px;
 }
 
 .section.dark{
@@ -184,7 +193,7 @@ margin-bottom:12px;
 }
 
 .section-title h2{
-font-size:46px;
+font-size:42px;
 font-weight:500;
 letter-spacing:.12em;
 }
@@ -208,7 +217,7 @@ border-color:#777;
 }
 
 .strength-card h3{
-font-size:24px;
+font-size:22px;
 font-weight:500;
 margin-bottom:18px;
 letter-spacing:.1em;
@@ -252,7 +261,7 @@ padding:26px;
 }
 
 .service-body h3{
-font-size:24px;
+font-size:22px;
 font-weight:500;
 margin-bottom:14px;
 letter-spacing:.1em;
@@ -291,7 +300,7 @@ padding:22px;
 }
 
 .work-body h3{
-font-size:22px;
+font-size:21px;
 font-weight:500;
 margin-bottom:10px;
 letter-spacing:.1em;
@@ -300,6 +309,18 @@ letter-spacing:.1em;
 .work-body p{
 font-size:14px;
 color:#aaa;
+}
+
+.about-box{
+max-width:960px;
+margin:0 auto;
+text-align:center;
+}
+
+.about-box p{
+color:#ccc;
+font-size:16px;
+margin-bottom:24px;
 }
 
 .flow{
@@ -316,7 +337,7 @@ border:1px solid rgba(255,255,255,.08);
 
 .flow-item h3{
 font-family:"Cormorant Garamond",serif;
-font-size:38px;
+font-size:36px;
 font-weight:500;
 margin-bottom:16px;
 color:#d8d3cb;
@@ -333,11 +354,12 @@ background:
 linear-gradient(rgba(0,0,0,.76),rgba(0,0,0,.9)),
 url("room.jpg") center/cover no-repeat;
 text-align:center;
+scroll-margin-top:100px;
 }
 
 .cta h2{
-font-size:58px;
-line-height:1.45;
+font-size:44px;
+line-height:1.5;
 font-weight:500;
 letter-spacing:.1em;
 margin-bottom:26px;
@@ -359,7 +381,7 @@ border-top:1px solid rgba(255,255,255,.08);
 
 .footer-logo{
 font-family:"Cormorant Garamond",serif;
-font-size:42px;
+font-size:40px;
 font-weight:600;
 letter-spacing:.13em;
 }
@@ -382,11 +404,16 @@ display:none;
 }
 
 .logo{
-font-size:36px;
+font-size:34px;
+}
+
+.hero{
+padding:120px 5% 70px;
 }
 
 .hero h1{
-font-size:52px;
+font-size:42px;
+line-height:1.45;
 }
 
 .strengths,
@@ -401,11 +428,11 @@ padding:90px 5%;
 }
 
 .section-title h2{
-font-size:34px;
+font-size:32px;
 }
 
 .cta h2{
-font-size:36px;
+font-size:32px;
 }
 
 .footer{
@@ -419,25 +446,23 @@ flex-direction:column;
 <body>
 
 <header class="header">
-<div class="logo">
+<a href="#top" class="logo">
 RH HOME
 <span>株式会社アールエイチホーム</span>
-</div>
+</a>
 
 <nav class="nav">
-<a href="#">ホーム</a>
-<a href="#">事業内容</a>
-<a href="#">施工事例</a>
-<a href="#">会社案内</a>
-<a href="#">お問い合わせ</a>
+<a href="#top">ホーム</a>
+<a href="#service">事業内容</a>
+<a href="#works">施工事例</a>
+<a href="#about">会社案内</a>
+<a href="#contact">お問い合わせ</a>
 </nav>
 
-<div class="tel">
-046-240-7955
-</div>
+<div class="tel">0120-897-390</div>
 </header>
 
-<section class="hero">
+<section id="top" class="hero">
 <div class="hero-inner">
 <div class="hero-sub">
 株式会社アールエイチホーム<br>
@@ -455,13 +480,13 @@ RH HOME
 </p>
 
 <div class="buttons">
-<a href="#" class="btn primary">施工事例を見る</a>
-<a href="#" class="btn">お問い合わせ</a>
+<a href="#works" class="btn primary">施工事例を見る</a>
+<a href="#contact" class="btn">お問い合わせ</a>
 </div>
 </div>
 </section>
 
-<section class="section">
+<section id="strength" class="section">
 <div class="section-title">
 <small>STRENGTH</small>
 <h2>アールエイチホームの強み</h2>
@@ -490,7 +515,7 @@ RH HOME
 </div>
 </section>
 
-<section class="section dark">
+<section id="service" class="section dark">
 <div class="section-title">
 <small>SERVICE</small>
 <h2>事業内容</h2>
@@ -531,7 +556,7 @@ RH HOME
 </div>
 </section>
 
-<section class="section">
+<section id="works" class="section">
 <div class="section-title">
 <small>WORKS</small>
 <h2>施工事例</h2>
@@ -572,7 +597,23 @@ RH HOME
 </div>
 </section>
 
-<section class="section dark">
+<section id="about" class="section dark">
+<div class="section-title">
+<small>ABOUT</small>
+<h2>会社案内</h2>
+</div>
+
+<div class="about-box">
+<p>
+株式会社アールエイチホームは、神奈川県大和市を中心に、住宅リノベーション・リフォーム・店舗内装を手掛けています。
+</p>
+<p>
+見た目の美しさだけでなく、使いやすさ、快適性、施工品質まで大切にし、お客様の理想に寄り添った空間づくりをご提案します。
+</p>
+</div>
+</section>
+
+<section id="flow" class="section">
 <div class="section-title">
 <small>FLOW</small>
 <h2>ご相談から完成までの流れ</h2>
@@ -606,7 +647,7 @@ RH HOME
 </div>
 </section>
 
-<section class="cta">
+<section id="contact" class="cta">
 <h2>
 住まいのお悩み、<br>
 まずはお気軽にご相談ください。
@@ -616,7 +657,7 @@ RH HOME
 神奈川県大和市を中心に対応しております。
 </p>
 
-<a href="#" class="btn primary">お問い合わせはこちら</a>
+<a href="tel:0120897390" class="btn primary">0120-897-390</a>
 </section>
 
 <footer class="footer">
@@ -630,8 +671,7 @@ RH HOME
 
 <div>
 <p>
-〒242-0021 神奈川県大和市中央2-3-19<br>
-TEL：046-240-7955
+TEL：0120-897-390
 </p>
 </div>
 </footer>
