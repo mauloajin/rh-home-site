@@ -506,3 +506,91 @@ flex-direction:column;
 }
 
 }
+/* TOP 事業内容 */
+
+.service-list{
+display:flex;
+flex-direction:column;
+gap:90px;
+}
+
+.service-row{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:60px;
+align-items:center;
+}
+
+.service-row.reverse .service-image{
+order:2;
+}
+
+.service-row.reverse .service-text{
+order:1;
+}
+
+.service-image{
+overflow:hidden;
+height:280px;
+background:#111;
+border:1px solid rgba(255,255,255,.08);
+}
+
+.service-image img{
+width:100%;
+height:100%;
+object-fit:cover;
+transition:1s;
+}
+
+.service-row:hover .service-image img{
+transform:scale(1.05);
+}
+
+.service-text span{
+display:block;
+font-size:13px;
+letter-spacing:.18em;
+color:#aaa;
+margin-bottom:16px;
+}
+
+.service-text h3{
+font-size:34px;
+font-weight:500;
+margin-bottom:22px;
+letter-spacing:.05em;
+}
+
+.service-text p{
+font-size:15px;
+line-height:2.4;
+color:#d0d0d0;
+}
+
+@media(max-width:1100px){
+
+.service-row{
+grid-template-columns:1fr;
+gap:30px;
+}
+
+.service-row.reverse .service-image,
+.service-row.reverse .service-text{
+order:initial;
+}
+
+.service-image{
+height:220px;
+}
+
+.service-text h3{
+font-size:24px;
+}
+
+.service-text p{
+font-size:13px;
+line-height:2.1;
+}
+
+}
