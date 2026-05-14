@@ -54,10 +54,9 @@ justify-content:space-between;
 align-items:center;
 padding:22px 5%;
 color:#fff;
-background:rgba(0,0,0,.2);
-backdrop-filter:blur(8px);
+background:transparent;
+backdrop-filter:none;
 }
-
 .logo{
 font-size:36px;
 font-weight:600;
