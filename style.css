@@ -792,11 +792,10 @@ line-height:2;
 
 }
 .service-intro{
-max-width:980px;
+max-width:1200px;
 margin:0 auto 80px;
 text-align:center;
 }
-
 .service-intro h2{
 font-size:34px;
 font-weight:500;
