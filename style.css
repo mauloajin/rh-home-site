@@ -885,3 +885,16 @@ font-size:20px;
 font-size:13px;
 }
 }
+/* 黒の重さを少し軽くする調整 */
+.section{
+background:linear-gradient(145deg,#1a1a1a 0%,#101010 100%);
+}
+
+.section-dark{
+background:linear-gradient(145deg,#111 0%,#1c1c1c 100%);
+}
+
+
+.section-title small{
+color:#b0b0b0;
+}
