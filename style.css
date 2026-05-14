@@ -818,7 +818,7 @@ gap:26px;
 
 .service-menu-box{
 background:linear-gradient(145deg,#1c1c1c,#101010);
-border:1px solid rgba(255,255,255,.08);
+border:1px solid rgba(255,255,255,.12);
 padding:34px 30px;
 box-shadow:0 20px 50px rgba(0,0,0,.28);
 }
