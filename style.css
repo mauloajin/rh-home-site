@@ -355,7 +355,7 @@ flex-shrink:0;
 }
 
 .works-slide img{
-height:260px;
+height:300px;
 transition:1s;
 filter:brightness(.88);
 }
