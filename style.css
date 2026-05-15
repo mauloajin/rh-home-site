@@ -660,3 +660,12 @@ line-height:2.1;
 }
 
 }
+/* TOP事業内容：02・04のテキスト位置調整 */
+.service-row.reverse .service-text{
+padding-left:80px;
+}
+@media(max-width:1100px){
+.service-row.reverse .service-text{
+padding-left:0;
+}
+}
