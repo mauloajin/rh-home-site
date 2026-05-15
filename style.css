@@ -278,12 +278,6 @@ margin-bottom:26px;
 filter:brightness(.92);
 }
 
-.card-number{
-font-size:14px;
-color:#b8a46a;
-margin:0 28px 14px;
-letter-spacing:.18em;
-}
 
 .card h3{
 font-size:21px;
@@ -341,13 +335,6 @@ transition:1s;
 transform:scale(1.05);
 }
 
-.service-text span{
-display:block;
-font-size:13px;
-letter-spacing:.18em;
-color:#b8a46a;
-margin-bottom:16px;
-}
 
 .service-text h3{
 font-size:34px;
