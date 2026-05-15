@@ -220,6 +220,10 @@ padding:120px 5%;
 background:#1b1b1b;
 }
 
+.works-section{
+background:linear-gradient(180deg,#202020,#171717);
+}
+
 .section-title{
 text-align:center;
 margin-bottom:76px;
