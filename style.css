@@ -1,3 +1,7 @@
+/* =========================
+RESET
+========================= */
+
 *{
 margin:0;
 padding:0;
@@ -21,14 +25,6 @@ width:100%;
 max-width:100vw;
 }
 
-body,
-header,
-section,
-footer,
-div{
-max-width:100%;
-}
-
 a{
 text-decoration:none;
 color:inherit;
@@ -36,12 +32,13 @@ color:inherit;
 
 img{
 width:100%;
-max-width:100%;
 display:block;
 object-fit:cover;
 }
 
-/* HEADER */
+/* =========================
+HEADER
+========================= */
 
 .header{
 position:fixed;
@@ -53,10 +50,11 @@ display:flex;
 justify-content:space-between;
 align-items:center;
 padding:22px 5%;
-color:#fff;
 background:transparent;
 backdrop-filter:none;
+color:#fff;
 }
+
 .logo{
 font-size:36px;
 font-weight:600;
@@ -107,7 +105,9 @@ letter-spacing:.04em;
 white-space:nowrap;
 }
 
-/* HERO */
+/* =========================
+HERO
+========================= */
 
 .hero{
 min-height:100vh;
@@ -177,34 +177,9 @@ line-height:2.3;
 margin-bottom:48px;
 }
 
-/* PAGE HERO */
-
-.page-hero{
-padding:220px 5% 140px;
-background:
-linear-gradient(rgba(0,0,0,.45),rgba(0,0,0,.58)),
-url("service-hero.jpg") center/cover no-repeat;
-text-align:center;
-color:#fff;
-position:relative;
-overflow:hidden;
-}
-
-.page-hero small{
-display:block;
-color:#b5b5b5;
-letter-spacing:.3em;
-font-size:13px;
-margin-bottom:18px;
-}
-
-.page-hero h1{
-font-size:52px;
-font-weight:500;
-letter-spacing:.14em;
-}
-
-/* BUTTON */
+/* =========================
+BUTTON
+========================= */
 
 .buttons{
 display:flex;
@@ -236,18 +211,14 @@ color:#111;
 transform:translateY(-2px);
 }
 
-/* SECTION */
+/* =========================
+SECTION
+========================= */
 
 .section{
 padding:120px 5%;
 background:#1b1b1b;
 }
-
-.section-dark{
-background:#242424;
-}
-
-/* TITLE */
 
 .section-title{
 text-align:center;
@@ -268,133 +239,134 @@ font-weight:500;
 letter-spacing:.12em;
 }
 
-/* GRID */
+/* =========================
+TOP SERVICE
+========================= */
 
-.grid-4{
-display:grid;
-grid-template-columns:repeat(4,1fr);
-gap:24px;
+.service-list{
+display:flex;
+flex-direction:column;
+gap:90px;
 }
 
-.grid-3{
+.service-row{
 display:grid;
-grid-template-columns:repeat(3,1fr);
-gap:26px;
+grid-template-columns:1fr 1fr;
+gap:60px;
+align-items:center;
 }
 
-/* CARD */
+.service-row.reverse .service-image{
+order:2;
+}
 
-.card{
-background:linear-gradient(145deg,#2a2a2a,#1b1b1b);
-border:1px solid rgba(255,255,255,.12);
-padding:0 0 34px;
-transition:.4s;
+.service-row.reverse .service-text{
+order:1;
+padding-left:80px;
+}
+
+.service-image{
 overflow:hidden;
-box-shadow:0 20px 50px rgba(0,0,0,.25);
+height:280px;
+background:#111;
+border:1px solid rgba(255,255,255,.08);
 }
 
-.card:hover{
-transform:translateY(-8px);
+.service-image img{
+width:100%;
+height:100%;
+transition:1s;
 }
 
-.card img{
-height:220px;
-margin-bottom:26px;
-filter:brightness(.92);
+.service-row:hover .service-image img{
+transform:scale(1.05);
 }
 
-.card-number{
-font-size:14px;
-color:#b5b5b5;
-margin:0 28px 14px;
+.service-text span{
+display:block;
+font-size:13px;
 letter-spacing:.18em;
+color:#aaa;
+margin-bottom:16px;
 }
 
-.card h3{
+.service-text h3{
+font-size:34px;
+font-weight:500;
+margin-bottom:22px;
+letter-spacing:.05em;
+}
+
+.service-text p{
+font-size:15px;
+line-height:2.4;
+color:#d0d0d0;
+}
+
+/* =========================
+WORKS
+========================= */
+
+.works-section{
+overflow:hidden;
+}
+
+.works-slider{
+overflow-x:auto;
+padding-bottom:10px;
+}
+
+.works-slider::-webkit-scrollbar{
+height:6px;
+}
+
+.works-slider::-webkit-scrollbar-thumb{
+background:rgba(255,255,255,.2);
+border-radius:10px;
+}
+
+.works-track{
+display:flex;
+gap:26px;
+width:max-content;
+}
+
+.works-slide{
+width:360px;
+background:linear-gradient(145deg,#2a2a2a,#171717);
+border:1px solid rgba(255,255,255,.12);
+overflow:hidden;
+box-shadow:0 18px 42px rgba(0,0,0,.25);
+flex-shrink:0;
+}
+
+.works-slide img{
+height:260px;
+transition:1s;
+filter:brightness(.88);
+}
+
+.works-slide:hover img{
+transform:scale(1.06);
+filter:brightness(1);
+}
+
+.works-slide h3{
 font-size:21px;
 font-weight:500;
-margin:0 28px 16px;
+margin:24px 24px 10px;
 }
 
-.card p{
+.works-slide p{
 font-size:14px;
 color:#d0d0d0;
-line-height:2.1;
-margin:0 28px;
+line-height:2;
+margin:0 24px 28px;
 }
 
-/* SERVICE */
-
-.service-intro{
-max-width:1200px;
-margin:0 auto 80px;
-text-align:center;
-}
-
-.service-intro h2{
-font-size:28px;
-font-weight:500;
-letter-spacing:.03em;
-line-height:1.8;
-margin-bottom:28px;
-}
-
-.service-intro p{
-font-size:15px;
-color:#d0d0d0;
-line-height:2.5;
-}
-
-.service-menu{
-display:grid;
-grid-template-columns:repeat(3,1fr);
-gap:26px;
-}
-
-.service-menu-box{
-background:linear-gradient(145deg,#2a2a2a,#1d1d1d);
-border:1px solid rgba(255,255,255,.12);
-padding:34px 30px;
-box-shadow:0 20px 50px rgba(0,0,0,.22);
-}
-
-.service-menu-box h3{
-font-size:22px;
-font-weight:500;
-letter-spacing:.08em;
-margin-bottom:22px;
-padding-bottom:16px;
-border-bottom:1px solid rgba(255,255,255,.12);
-}
-
-.service-menu-box ul{
-list-style:none;
-}
-
-.service-menu-box li{
-font-size:14px;
-color:#d0d0d0;
-line-height:2.2;
-border-bottom:1px solid rgba(255,255,255,.05);
-padding:4px 0;
-}
-
-.service-note{
-max-width:860px;
-margin:70px auto 0;
-text-align:center;
-border:1px solid rgba(255,255,255,.12);
-padding:34px;
-background:#1e1e1e;
-}
-
-.service-note p{
-font-size:15px;
-color:#ddd;
-line-height:2.4;
-}
-
-/* CTA */
+/* =========================
+CTA
+========================= */
 
 .cta{
 padding:140px 5%;
@@ -418,7 +390,9 @@ color:#ddd;
 margin-bottom:40px;
 }
 
-/* FOOTER */
+/* =========================
+FOOTER
+========================= */
 
 .footer{
 padding:65px 5%;
@@ -442,7 +416,9 @@ color:#999;
 line-height:2.2;
 }
 
-/* MOBILE */
+/* =========================
+MOBILE
+========================= */
 
 @media(max-width:1100px){
 
@@ -471,170 +447,9 @@ font-size:29px;
 font-size:13px;
 }
 
-.page-hero{
-padding:170px 5% 100px;
-}
-
-.page-hero h1{
-font-size:34px;
-}
-
-.grid-4,
-.grid-3,
-.service-menu{
-grid-template-columns:1fr;
-}
-
 .section{
 padding:90px 5%;
 }
-
-.card img{
-height:210px;
-}
-
-.service-intro h2{
-font-size:24px;
-}
-
-.service-menu-box{
-padding:28px 22px;
-}
-
-.footer{
-flex-direction:column;
-}
-
-}
-/* TOP 事業内容 */
-
-.service-list{
-display:flex;
-flex-direction:column;
-gap:90px;
-}
-
-.service-row{
-display:grid;
-grid-template-columns:1fr 1fr;
-gap:60px;
-align-items:center;
-}
-
-.service-row.reverse .service-image{
-order:2;
-}
-
-.service-row.reverse .service-text{
-order:1;
-}
-
-.service-image{
-overflow:hidden;
-height:280px;
-background:#111;
-border:1px solid rgba(255,255,255,.08);
-}
-
-.service-image img{
-width:100%;
-height:100%;
-object-fit:cover;
-transition:1s;
-}
-
-.service-row:hover .service-image img{
-transform:scale(1.05);
-}
-
-.service-text span{
-display:block;
-font-size:13px;
-letter-spacing:.18em;
-color:#aaa;
-margin-bottom:16px;
-}
-
-.service-text h3{
-font-size:34px;
-font-weight:500;
-margin-bottom:22px;
-letter-spacing:.05em;
-}
-
-.service-text p{
-font-size:15px;
-line-height:2.4;
-color:#d0d0d0;
-}
-
-@media(max-width:1100px){
-
-
-}
-/* TOP 事業内容 横並び */
-
-.service-list{
-display:flex;
-flex-direction:column;
-gap:90px;
-}
-
-.service-row{
-display:grid;
-grid-template-columns:1fr 1fr;
-gap:60px;
-align-items:center;
-}
-
-.service-row.reverse .service-image{
-order:2;
-}
-
-.service-row.reverse .service-text{
-order:1;
-}
-
-.service-image{
-overflow:hidden;
-height:280px;
-background:#111;
-border:1px solid rgba(255,255,255,.08);
-}
-
-.service-image img{
-width:100%;
-height:100%;
-object-fit:cover;
-transition:1s;
-}
-
-.service-row:hover .service-image img{
-transform:scale(1.05);
-}
-
-.service-text span{
-display:block;
-font-size:13px;
-letter-spacing:.18em;
-color:#aaa;
-margin-bottom:16px;
-}
-
-.service-text h3{
-font-size:34px;
-font-weight:500;
-margin-bottom:22px;
-letter-spacing:.05em;
-}
-
-.service-text p{
-font-size:15px;
-line-height:2.4;
-color:#d0d0d0;
-}
-
-@media(max-width:1100px){
 
 .service-row{
 grid-template-columns:1fr;
@@ -644,6 +459,7 @@ gap:30px;
 .service-row.reverse .service-image,
 .service-row.reverse .service-text{
 order:initial;
+padding-left:0;
 }
 
 .service-image{
@@ -659,13 +475,32 @@ font-size:13px;
 line-height:2.1;
 }
 
+.works-slide{
+width:82vw;
 }
-/* TOP事業内容：02・04のテキスト位置調整 */
-.service-row.reverse .service-text{
-padding-left:80px;
+
+.works-slide img{
+height:220px;
 }
-@media(max-width:1100px){
-.service-row.reverse .service-text{
-padding-left:0;
+
+.works-slide h3{
+font-size:20px;
 }
+
+.works-slide p{
+font-size:13px;
+}
+
+.cta{
+padding:100px 5%;
+}
+
+.cta h2{
+font-size:28px;
+}
+
+.footer{
+flex-direction:column;
+}
+
 }
