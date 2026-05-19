@@ -32,7 +32,9 @@ display:block;
 object-fit:cover;
 }
 
-/* HEADER */
+/* =========================
+HEADER
+========================= */
 
 .header{
 position:fixed;
@@ -104,7 +106,9 @@ letter-spacing:.04em;
 white-space:nowrap;
 }
 
-/* HERO */
+/* =========================
+HERO
+========================= */
 
 .hero{
 min-height:100vh;
@@ -174,7 +178,9 @@ line-height:2.3;
 margin-bottom:48px;
 }
 
-/* PAGE HERO */
+/* =========================
+PAGE HERO
+========================= */
 
 .page-hero{
 padding:210px 5% 140px;
@@ -214,7 +220,9 @@ font-weight:500;
 letter-spacing:.12em;
 }
 
-/* BUTTON */
+/* =========================
+BUTTON
+========================= */
 
 .buttons{
 display:flex;
@@ -234,6 +242,7 @@ letter-spacing:.12em;
 transition:.35s;
 min-width:200px;
 color:#fff;
+cursor:pointer;
 }
 
 .btn.primary{
@@ -249,7 +258,9 @@ border-color:#b8a46a;
 transform:translateY(-2px);
 }
 
-/* SECTION */
+/* =========================
+SECTION
+========================= */
 
 .section{
 position:relative;
@@ -291,7 +302,9 @@ font-weight:500;
 letter-spacing:.12em;
 }
 
-/* STRENGTH */
+/* =========================
+CARD
+========================= */
 
 .grid-4{
 display:grid;
@@ -339,7 +352,9 @@ line-height:2.1;
 margin:0 28px;
 }
 
-/* SERVICE */
+/* =========================
+SERVICE
+========================= */
 
 .service-list{
 display:flex;
@@ -397,7 +412,9 @@ line-height:2.4;
 color:#d4d4d4;
 }
 
-/* CONCEPT */
+/* =========================
+CONCEPT
+========================= */
 
 .concept-section{
 position:relative;
@@ -444,7 +461,9 @@ line-height:2.65;
 margin-bottom:28px;
 }
 
-/* WORKS */
+/* =========================
+WORKS
+========================= */
 
 .works-slider{
 overflow-x:auto;
@@ -514,80 +533,9 @@ line-height:2;
 margin:0 24px 28px;
 }
 
-/* SERVICE PAGE */
-
-.service-intro{
-max-width:1200px;
-margin:0 auto 80px;
-text-align:center;
-}
-
-.service-intro h2{
-font-size:28px;
-font-weight:500;
-letter-spacing:.03em;
-line-height:1.8;
-margin-bottom:28px;
-}
-
-.service-intro p{
-font-size:15px;
-color:#d4d4d4;
-line-height:2.5;
-}
-
-.service-menu{
-display:grid;
-grid-template-columns:repeat(3,1fr);
-gap:26px;
-}
-
-.service-menu-box{
-background:linear-gradient(145deg,#303030,#202020);
-border:1px solid rgba(255,255,255,.13);
-padding:34px 30px;
-box-shadow:0 22px 60px rgba(0,0,0,.24);
-border-radius:6px;
-}
-
-.service-menu-box h3{
-font-size:22px;
-font-weight:500;
-letter-spacing:.08em;
-margin-bottom:22px;
-padding-bottom:16px;
-border-bottom:1px solid rgba(184,164,106,.32);
-}
-
-.service-menu-box ul{
-list-style:none;
-}
-
-.service-menu-box li{
-font-size:14px;
-color:#d6d6d6;
-line-height:2.2;
-border-bottom:1px solid rgba(255,255,255,.06);
-padding:4px 0;
-}
-
-.service-note{
-max-width:860px;
-margin:70px auto 0;
-text-align:center;
-border:1px solid rgba(255,255,255,.14);
-padding:34px;
-background:#202020;
-border-radius:6px;
-}
-
-.service-note p{
-font-size:15px;
-color:#ddd;
-line-height:2.4;
-}
-
-/* COMPANY PAGE */
+/* =========================
+COMPANY
+========================= */
 
 .company-section{
 background:linear-gradient(180deg,#222,#1a1a1a);
@@ -653,7 +601,110 @@ font-size:15px;
 line-height:2;
 }
 
-/* CTA */
+/* =========================
+CONTACT
+========================= */
+
+.contact-section{
+background:linear-gradient(180deg,#1c1c1c,#171717);
+}
+
+.contact-intro{
+max-width:900px;
+margin:0 auto 70px;
+text-align:center;
+}
+
+.contact-intro h2{
+font-size:34px;
+font-weight:500;
+line-height:1.8;
+letter-spacing:.08em;
+margin-bottom:24px;
+}
+
+.contact-intro p{
+font-size:15px;
+color:#d4d4d4;
+line-height:2.4;
+}
+
+.contact-wrap{
+max-width:1100px;
+margin:0 auto;
+display:grid;
+grid-template-columns:.9fr 1.1fr;
+gap:50px;
+align-items:start;
+}
+
+.contact-info,
+.contact-form{
+background:linear-gradient(145deg,#303030,#202020);
+border:1px solid rgba(255,255,255,.13);
+box-shadow:0 22px 60px rgba(0,0,0,.24);
+border-radius:6px;
+padding:40px;
+}
+
+.contact-info h3{
+font-size:24px;
+font-weight:500;
+margin-bottom:18px;
+}
+
+.contact-info p{
+font-size:14px;
+color:#d4d4d4;
+line-height:2.2;
+}
+
+.contact-tel{
+display:block;
+font-size:34px;
+letter-spacing:.05em;
+margin:24px 0 10px;
+color:#b8a46a;
+}
+
+.contact-time{
+font-size:13px;
+color:#aaa;
+}
+
+.contact-form label{
+display:block;
+font-size:14px;
+color:#ddd;
+margin-bottom:22px;
+}
+
+.contact-form input,
+.contact-form textarea{
+width:100%;
+margin-top:8px;
+padding:16px;
+background:#151515;
+border:1px solid rgba(255,255,255,.16);
+color:#fff;
+font-family:inherit;
+font-size:15px;
+border-radius:4px;
+}
+
+.contact-form textarea{
+height:180px;
+resize:vertical;
+}
+
+.contact-submit{
+text-align:center;
+margin-top:36px;
+}
+
+/* =========================
+CTA
+========================= */
 
 .cta{
 padding:145px 5%;
@@ -677,7 +728,9 @@ color:#d0d0d0;
 margin-bottom:40px;
 }
 
-/* FOOTER */
+/* =========================
+FOOTER
+========================= */
 
 .footer{
 padding:65px 5%;
@@ -701,7 +754,9 @@ color:#aaa;
 line-height:2.2;
 }
 
-/* MOBILE */
+/* =========================
+MOBILE
+========================= */
 
 @media(max-width:1100px){
 
@@ -800,18 +855,6 @@ font-size:20px;
 font-size:13px;
 }
 
-.service-menu{
-grid-template-columns:1fr;
-}
-
-.service-menu-box{
-padding:28px 22px;
-}
-
-.service-menu-box h3{
-font-size:20px;
-}
-
 .company-intro h2{
 font-size:26px;
 line-height:1.7;
@@ -834,6 +877,23 @@ background:transparent;
 .company-data{
 padding:0 20px 18px;
 font-size:13px;
+}
+
+.contact-wrap{
+grid-template-columns:1fr;
+}
+
+.contact-intro h2{
+font-size:26px;
+}
+
+.contact-info,
+.contact-form{
+padding:28px 22px;
+}
+
+.contact-tel{
+font-size:28px;
 }
 
 .cta{
