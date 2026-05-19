@@ -11,7 +11,11 @@
 <body>
 
 <header class="header">
-<a href="index.html" class="logo">RH HOME<span>株式会社アールエイチホーム</span></a>
+<a href="index.html" class="logo">
+RH HOME
+<span>株式会社アールエイチホーム</span>
+</a>
+
 <nav class="nav">
 <a href="index.html">ホーム</a>
 <a href="service.html">事業内容</a>
@@ -19,6 +23,7 @@
 <a href="company.html">会社案内</a>
 <a href="contact.html">お問い合わせ</a>
 </nav>
+
 <div class="tel">0120-897-390</div>
 </header>
 
@@ -27,38 +32,72 @@
 <h1>お問い合わせ</h1>
 </section>
 
-<section class="section">
-<div class="text-box">
+<section class="section contact-section">
+
+<div class="contact-intro">
+<h2>住まい・店舗の工事について<br>お気軽にご相談ください。</h2>
 <p>
-リノベーション・リフォーム・店舗内装のご相談は、お電話またはフォームよりお気軽にお問い合わせください。
-</p>
-<p>
-TEL：0120-897-390
+リフォーム・リノベーション・店舗内装・外構工事など、<br>
+小さな工事から大規模改修まで幅広く対応しております。
 </p>
 </div>
-</section>
 
-<section class="section section-dark">
-<form class="form">
-<label>お名前</label>
-<input type="text" placeholder="山田 太郎">
+<div class="contact-wrap">
 
-<label>電話番号</label>
-<input type="tel" placeholder="0120-897-390">
+<div class="contact-info">
+<h3>お電話でのお問い合わせ</h3>
+<p>お急ぎの方はお電話にてお問い合わせください。</p>
+<a href="tel:0120897390" class="contact-tel">0120-897-390</a>
+<p class="contact-time">受付時間　8:00〜20:00</p>
+</div>
 
-<label>メールアドレス</label>
-<input type="email" placeholder="example@example.com">
+<form class="contact-form" action="#" method="POST">
 
-<label>お問い合わせ内容</label>
-<textarea placeholder="ご相談内容をご入力ください"></textarea>
+<label>
+お名前
+<input type="text" name="name" placeholder="山田 太郎" required>
+</label>
 
-<a href="tel:0120897390" class="btn primary">電話で問い合わせる</a>
+<label>
+電話番号
+<input type="tel" name="tel" placeholder="0120-897-390">
+</label>
+
+<label>
+メールアドレス
+<input type="email" name="email" placeholder="example@example.com" required>
+</label>
+
+<label>
+お問い合わせ内容
+<textarea name="message" placeholder="ご相談内容をご入力ください" required></textarea>
+</label>
+
+<div class="contact-submit">
+<button type="submit" class="btn primary">送信する</button>
+</div>
+
 </form>
+
+</div>
+
 </section>
 
 <footer class="footer">
-<div><div class="footer-logo">RH HOME</div><p>株式会社アールエイチホーム<br>リノベーション・リフォーム 神奈川 大和</p></div>
-<div><p>TEL：0120-897-390<br>神奈川県大和市</p></div>
+<div>
+<div class="footer-logo">RH HOME</div>
+<p>
+株式会社アールエイチホーム<br>
+リフォーム・リノベーション
+</p>
+</div>
+
+<div>
+<p>
+TEL：0120-897-390<br>
+神奈川県を中心に関東エリア対応
+</p>
+</div>
 </footer>
 
 </body>
