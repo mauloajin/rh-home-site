@@ -7,6 +7,71 @@
 
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Noto+Serif+JP:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
+
+<style>
+.service-card-list{
+max-width:1100px;
+margin:0 auto;
+display:flex;
+flex-direction:column;
+gap:28px;
+}
+
+.service-card{
+background:linear-gradient(145deg,#2c2c2c,#181818);
+border:1px solid rgba(255,255,255,.12);
+border-radius:6px;
+padding:42px;
+box-shadow:0 24px 70px rgba(0,0,0,.28);
+}
+
+.service-card h3{
+font-size:28px;
+font-weight:500;
+letter-spacing:.06em;
+margin-bottom:18px;
+}
+
+.service-card p{
+font-size:15px;
+color:#d4d4d4;
+line-height:2.3;
+margin-bottom:26px;
+}
+
+.service-card ul{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:10px 24px;
+list-style:none;
+}
+
+.service-card li{
+font-size:14px;
+color:#ddd;
+padding-bottom:8px;
+border-bottom:1px solid rgba(255,255,255,.08);
+}
+
+@media(max-width:1100px){
+.service-card{
+padding:30px 22px;
+}
+
+.service-card h3{
+font-size:23px;
+}
+
+.service-card p{
+font-size:13px;
+}
+
+.service-card ul{
+grid-template-columns:1fr;
+}
+}
+</style>
+
 </head>
 
 <body>
@@ -47,19 +112,19 @@ RH HOME
 </h2>
 
 <p>
-住宅・マンション・店舗を問わず、内装工事から外装・外構、設備工事まで。
+住宅・マンション・店舗を問わず、内装工事から外装・外構、設備工事まで。<br>
 小さな修繕から大規模な改修まで、内容に合わせて柔軟に対応いたします。
 </p>
 
 </div>
 
-<div class="service-detail-list">
+<div class="service-card-list">
 
-<div class="service-detail-row">
-<div class="service-detail-number">01</div>
-<div class="service-detail-content">
+<div class="service-card">
 <h3>住宅・マンション工事</h3>
-<p>戸建住宅やマンションの改修、間取り変更、内装リフォームまで、暮らし方に合わせた住空間づくりを行います。</p>
+<p>
+戸建住宅やマンションの改修、間取り変更、内装リフォームまで、暮らし方に合わせた住空間づくりを行います。
+</p>
 <ul>
 <li>フルリノベーション</li>
 <li>間取り変更</li>
@@ -70,13 +135,12 @@ RH HOME
 <li>建具交換</li>
 </ul>
 </div>
-</div>
 
-<div class="service-detail-row">
-<div class="service-detail-number">02</div>
-<div class="service-detail-content">
+<div class="service-card">
 <h3>水まわり工事</h3>
-<p>キッチン・浴室・トイレ・洗面など、毎日使う場所だからこそ、使いやすさと清潔感を大切に施工します。</p>
+<p>
+キッチン・浴室・トイレ・洗面など、毎日使う場所だからこそ、使いやすさと清潔感を大切に施工します。
+</p>
 <ul>
 <li>キッチン交換</li>
 <li>浴室交換</li>
@@ -87,13 +151,12 @@ RH HOME
 <li>給排水工事</li>
 </ul>
 </div>
-</div>
 
-<div class="service-detail-row">
-<div class="service-detail-number">03</div>
-<div class="service-detail-content">
+<div class="service-card">
 <h3>内装工事</h3>
-<p>壁・床・天井・建具など、空間の印象を左右する内装工事に対応しています。部分的な改修もご相談ください。</p>
+<p>
+壁・床・天井・建具など、空間の印象を左右する内装工事に対応しています。部分的な改修もご相談ください。
+</p>
 <ul>
 <li>壁紙・クロス張り替え</li>
 <li>床張り替え</li>
@@ -104,13 +167,12 @@ RH HOME
 <li>防音工事</li>
 </ul>
 </div>
-</div>
 
-<div class="service-detail-row">
-<div class="service-detail-number">04</div>
-<div class="service-detail-content">
+<div class="service-card">
 <h3>外装・外構工事</h3>
-<p>外壁・屋根・門まわり・フェンス・デッキなど、建物の印象と機能性を高める外まわりの工事にも対応しています。</p>
+<p>
+外壁・屋根・門まわり・フェンス・デッキなど、建物の印象と機能性を高める外まわりの工事にも対応しています。
+</p>
 <ul>
 <li>外壁塗装</li>
 <li>屋根工事</li>
@@ -123,13 +185,12 @@ RH HOME
 <li>カーポート</li>
 </ul>
 </div>
-</div>
 
-<div class="service-detail-row">
-<div class="service-detail-number">05</div>
-<div class="service-detail-content">
+<div class="service-card">
 <h3>店舗・テナント工事</h3>
-<p>飲食店・サロン・美容室・スクールなど、業種やコンセプトに合わせた店舗空間を設計・施工します。</p>
+<p>
+飲食店・サロン・美容室・スクールなど、業種やコンセプトに合わせた店舗空間を設計・施工します。
+</p>
 <ul>
 <li>店舗内装</li>
 <li>美容室内装</li>
@@ -141,13 +202,12 @@ RH HOME
 <li>家具・什器工事</li>
 </ul>
 </div>
-</div>
 
-<div class="service-detail-row">
-<div class="service-detail-number">06</div>
-<div class="service-detail-content">
+<div class="service-card">
 <h3>設備・その他工事</h3>
-<p>電気・水道・サッシ・塗装・土木など、建物に関わる幅広い工事に対応しています。</p>
+<p>
+電気・水道・サッシ・塗装・土木など、建物に関わる幅広い工事に対応しています。
+</p>
 <ul>
 <li>電気工事</li>
 <li>水道設備工事</li>
@@ -158,7 +218,6 @@ RH HOME
 <li>害虫・害獣駆除</li>
 <li>企画・設計・請負</li>
 </ul>
-</div>
 </div>
 
 </div>
