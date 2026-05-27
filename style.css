@@ -54,9 +54,10 @@ color:#fff;
 .logo{
 font-size:38px;
 font-weight:700;
-letter-spacing:.08em;
+letter-spacing:.06em;
 line-height:1;
 white-space:nowrap;
+text-transform:uppercase;
 }
 
 .logo span{
@@ -779,11 +780,12 @@ gap:40px;
 }
 
 .footer-logo{
-font-size:42px;
-font-weight:600;
-letter-spacing:.12em;
+font-size:40px;
+font-weight:700;
+letter-spacing:.06em;
 margin-bottom:16px;
 line-height:1;
+text-transform:uppercase;
 }
 
 .footer-brand p{
@@ -995,7 +997,7 @@ align-items:flex-start;
 }
 
 .footer-logo{
-font-size:34px;
+font-size:32px;
 }
 
 .footer-tel{
