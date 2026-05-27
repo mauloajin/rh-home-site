@@ -52,13 +52,12 @@ color:#fff;
 }
 
 .logo{
-font-family:"Times New Roman",serif;
-font-size:38px;
-font-weight:700;
-letter-spacing:.04em;
+font-family:'Bebas Neue',sans-serif;
+font-size:58px;
+font-weight:400;
+letter-spacing:.08em;
 line-height:1;
 white-space:nowrap;
-text-transform:uppercase;
 }
 
 .logo span{
