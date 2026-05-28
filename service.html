@@ -9,20 +9,35 @@
 <link rel="stylesheet" href="style.css">
 
 <style>
+body{
+background:#f3f1ec;
+color:#111;
+}
+
 .header{
+height:86px;
+padding:14px 5%;
 background:rgba(10,10,10,.82);
 border-bottom:1px solid rgba(255,255,255,.08);
+backdrop-filter:blur(8px);
+transition:transform .35s ease;
+}
+
+.header.hide{
+transform:translateY(-100%);
 }
 
 .logo{
 display:flex;
 flex-direction:column;
 gap:6px;
+font-family:inherit;
 }
 
 .logo-img{
 width:210px;
 height:auto;
+display:block;
 }
 
 .logo span{
@@ -31,37 +46,37 @@ letter-spacing:.28em;
 color:#b8a46a;
 }
 
-.service-page-hero{
-padding:170px 5% 95px;
+.service-hero{
+padding:150px 5% 80px;
 background:
 linear-gradient(rgba(0,0,0,.62),rgba(0,0,0,.72)),
 url("service-hero.jpg") center/cover no-repeat;
 text-align:center;
+color:#fff;
 }
 
-.service-page-hero small{
+.service-hero small{
 display:block;
 font-size:15px;
 letter-spacing:.3em;
 color:#b8a46a;
-margin-bottom:18px;
+margin-bottom:16px;
 }
 
-.service-page-hero h1{
-font-size:48px;
+.service-hero h1{
+font-size:46px;
 font-weight:500;
 letter-spacing:.12em;
 }
 
-.service-light{
+.service-section{
+padding:80px 5% 95px;
 background:#f3f1ec;
-color:#111;
-padding:95px 5%;
 }
 
 .service-lead{
 max-width:900px;
-margin:0 auto 60px;
+margin:0 auto 58px;
 text-align:center;
 }
 
@@ -74,16 +89,17 @@ margin-bottom:18px;
 }
 
 .service-lead h2{
-font-size:34px;
+font-size:32px;
 font-weight:500;
 line-height:1.8;
-margin-bottom:22px;
+letter-spacing:.08em;
+margin-bottom:20px;
 }
 
 .service-lead p{
 font-size:15px;
 line-height:2.4;
-color:#444;
+color:#333;
 }
 
 .service-card-list{
@@ -91,18 +107,18 @@ max-width:1120px;
 margin:0 auto;
 display:flex;
 flex-direction:column;
-gap:18px;
+gap:16px;
 }
 
 .service-card{
 display:grid;
-grid-template-columns:90px 1.1fr 1.4fr;
+grid-template-columns:88px 1.1fr 1.45fr;
 gap:34px;
 align-items:center;
 background:#fff;
 border:1px solid #ddd;
-padding:32px 36px;
-box-shadow:0 12px 34px rgba(0,0,0,.08);
+padding:30px 36px;
+box-shadow:0 10px 30px rgba(0,0,0,.07);
 }
 
 .service-number{
@@ -123,7 +139,7 @@ margin-bottom:10px;
 .service-card p{
 font-size:14px;
 line-height:2;
-color:#444;
+color:#333;
 }
 
 .service-card ul{
@@ -136,39 +152,123 @@ list-style:none;
 .service-card li{
 font-size:13px;
 color:#333;
-letter-spacing:.06em;
+letter-spacing:.05em;
 }
 
 .service-card li::before{
 content:"・";
 color:#b8a46a;
+margin-right:2px;
 }
 
 .service-note{
 max-width:900px;
-margin:60px auto 0;
+margin:58px auto 0;
 text-align:center;
 }
 
 .service-note p{
 font-size:15px;
 line-height:2.4;
-color:#444;
+color:#333;
+}
+
+.cta{
+background:
+linear-gradient(rgba(0,0,0,.72),rgba(0,0,0,.82)),
+url("room.jpg") center/cover no-repeat;
+}
+
+.footer{
+background:#0f0f0f;
+border-top:1px solid rgba(255,255,255,.08);
+color:#fff;
+}
+
+.footer-inner{
+max-width:1200px;
+margin:0 auto;
+padding:48px 5% 36px;
+display:grid;
+grid-template-columns:1fr 1fr 1fr;
+align-items:center;
+gap:40px;
 }
 
 .footer-logo-img{
 width:230px;
 height:auto;
-margin-bottom:18px;
+display:block;
+}
+
+.footer-brand p{
+font-size:13px;
+line-height:2.1;
+color:#d0d0d0;
+}
+
+.footer-contact{
+display:flex;
+align-items:center;
+justify-content:flex-end;
+gap:34px;
+}
+
+.footer-tel{
+font-size:30px;
+letter-spacing:.06em;
+color:#fff;
+white-space:nowrap;
+}
+
+.footer-instagram{
+display:flex;
+flex-direction:column;
+font-size:14px;
+line-height:1.8;
+color:#d0d0d0;
+border-left:1px solid rgba(255,255,255,.22);
+padding-left:34px;
+}
+
+.footer-instagram span{
+color:#b8a46a;
+font-size:13px;
+letter-spacing:.08em;
+}
+
+.footer-bottom{
+text-align:center;
+padding:0 5% 24px;
+font-size:12px;
+color:#aaa;
+letter-spacing:.08em;
 }
 
 @media(max-width:1100px){
+.header{
+height:auto;
+padding:14px 5%;
+}
+
 .logo-img{
 width:150px;
 }
 
-.service-page-hero h1{
+.service-hero{
+padding:130px 5% 70px;
+}
+
+.service-hero h1{
 font-size:38px;
+}
+
+.service-section{
+padding:70px 5%;
+}
+
+.service-lead h2{
+font-size:25px;
 }
 
 .service-card{
@@ -187,8 +287,29 @@ padding-bottom:12px;
 grid-template-columns:1fr;
 }
 
+.footer-inner{
+grid-template-columns:1fr;
+gap:28px;
+}
+
+.footer-contact{
+align-items:flex-start;
+justify-content:flex-start;
+flex-direction:column;
+gap:18px;
+}
+
+.footer-instagram{
+border-left:none;
+padding-left:0;
+}
+
 .footer-logo-img{
 width:180px;
+}
+
+.footer-tel{
+font-size:24px;
 }
 }
 </style>
@@ -196,7 +317,7 @@ width:180px;
 
 <body>
 
-<header class="header">
+<header class="header" id="siteHeader">
 
 <a href="index.html" class="logo">
 <img src="rh-logo.png" alt="RH HOME" class="logo-img">
@@ -215,12 +336,12 @@ width:180px;
 
 </header>
 
-<section class="service-page-hero">
+<section class="service-hero">
 <small>SERVICE</small>
 <h1>事業内容</h1>
 </section>
 
-<section class="service-light">
+<section class="service-section">
 
 <div class="service-lead">
 <small>SERVICE MENU</small>
@@ -369,8 +490,11 @@ width:180px;
 
 <div class="footer-inner">
 
-<div class="footer-brand">
+<div>
 <img src="rh-logo.png" alt="RH HOME" class="footer-logo-img">
+</div>
+
+<div class="footer-brand">
 <p>
 株式会社アールエイチホーム<br>
 リフォーム・リノベーション / 店舗内装工事<br>
@@ -380,8 +504,10 @@ width:180px;
 
 <div class="footer-contact">
 <a href="tel:0120897390" class="footer-tel">0120-897-390</a>
+
 <a href="https://www.instagram.com/rhhome_yamato/" target="_blank" class="footer-instagram">
-Instagram　@rhhome_yamato
+<span>Instagram</span>
+@rhhome_yamato
 </a>
 </div>
 
@@ -392,6 +518,23 @@ Instagram　@rhhome_yamato
 </div>
 
 </footer>
+
+<script>
+let lastScrollY = window.scrollY;
+const header = document.getElementById("siteHeader");
+
+window.addEventListener("scroll", function(){
+const currentScrollY = window.scrollY;
+
+if(currentScrollY > lastScrollY && currentScrollY > 120){
+header.classList.add("hide");
+}else{
+header.classList.remove("hide");
+}
+
+lastScrollY = currentScrollY;
+});
+</script>
 
 </body>
 </html>
