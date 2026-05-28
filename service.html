@@ -9,20 +9,25 @@
 <link rel="stylesheet" href="style.css">
 
 <style>
+.service-light{
+background:#f3f1ec;
+color:#222;
+}
+
 .service-card-list{
 max-width:1100px;
 margin:0 auto;
 display:flex;
 flex-direction:column;
-gap:28px;
+gap:30px;
 }
 
 .service-card{
-background:linear-gradient(145deg,#2c2c2c,#181818);
-border:1px solid rgba(255,255,255,.12);
+background:#fff;
+border:1px solid #ddd;
 border-radius:6px;
-padding:42px;
-box-shadow:0 24px 70px rgba(0,0,0,.28);
+padding:44px;
+box-shadow:0 10px 40px rgba(0,0,0,.08);
 }
 
 .service-card h3{
@@ -30,27 +35,49 @@ font-size:28px;
 font-weight:500;
 letter-spacing:.06em;
 margin-bottom:18px;
+color:#111;
 }
 
 .service-card p{
 font-size:15px;
-color:#d4d4d4;
+color:#555;
 line-height:2.3;
-margin-bottom:26px;
+margin-bottom:28px;
 }
 
 .service-card ul{
 display:grid;
 grid-template-columns:repeat(3,1fr);
-gap:10px 24px;
+gap:12px 28px;
 list-style:none;
 }
 
 .service-card li{
 font-size:14px;
-color:#ddd;
+color:#555;
 padding-bottom:8px;
-border-bottom:1px solid rgba(255,255,255,.08);
+border-bottom:1px solid #ddd;
+}
+
+.service-light .company-intro h2,
+.service-light .company-intro small{
+color:#111;
+}
+
+.service-light .company-intro p{
+color:#555;
+}
+
+.service-note{
+max-width:900px;
+margin:70px auto 0;
+text-align:center;
+}
+
+.service-note p{
+font-size:15px;
+line-height:2.4;
+color:#555;
 }
 
 @media(max-width:1100px){
@@ -122,9 +149,7 @@ RH HOME
 
 <div class="service-card">
 <h3>住宅・マンション工事</h3>
-<p>
-戸建住宅やマンションの改修、間取り変更、内装リフォームまで、暮らし方に合わせた住空間づくりを行います。
-</p>
+<p>戸建住宅やマンションの改修、間取り変更、内装リフォームまで、暮らし方に合わせた住空間づくりを行います。</p>
 <ul>
 <li>フルリノベーション</li>
 <li>間取り変更</li>
@@ -138,9 +163,7 @@ RH HOME
 
 <div class="service-card">
 <h3>水まわり工事</h3>
-<p>
-キッチン・浴室・トイレ・洗面など、毎日使う場所だからこそ、使いやすさと清潔感を大切に施工します。
-</p>
+<p>キッチン・浴室・トイレ・洗面など、毎日使う場所だからこそ、使いやすさと清潔感を大切に施工します。</p>
 <ul>
 <li>キッチン交換</li>
 <li>浴室交換</li>
@@ -154,9 +177,7 @@ RH HOME
 
 <div class="service-card">
 <h3>内装工事</h3>
-<p>
-壁・床・天井・建具など、空間の印象を左右する内装工事に対応しています。部分的な改修もご相談ください。
-</p>
+<p>壁・床・天井・建具など、空間の印象を左右する内装工事に対応しています。部分的な改修もご相談ください。</p>
 <ul>
 <li>壁紙・クロス張り替え</li>
 <li>床張り替え</li>
@@ -170,9 +191,7 @@ RH HOME
 
 <div class="service-card">
 <h3>外装・外構工事</h3>
-<p>
-外壁・屋根・門まわり・フェンス・デッキなど、建物の印象と機能性を高める外まわりの工事にも対応しています。
-</p>
+<p>外壁・屋根・門まわり・フェンス・デッキなど、建物の印象と機能性を高める外まわりの工事にも対応しています。</p>
 <ul>
 <li>外壁塗装</li>
 <li>屋根工事</li>
@@ -188,9 +207,7 @@ RH HOME
 
 <div class="service-card">
 <h3>店舗・テナント工事</h3>
-<p>
-飲食店・サロン・美容室・スクールなど、業種やコンセプトに合わせた店舗空間を設計・施工します。
-</p>
+<p>飲食店・サロン・美容室・スクールなど、業種やコンセプトに合わせた店舗空間を設計・施工します。</p>
 <ul>
 <li>店舗内装</li>
 <li>美容室内装</li>
@@ -205,9 +222,7 @@ RH HOME
 
 <div class="service-card">
 <h3>設備・その他工事</h3>
-<p>
-電気・水道・サッシ・塗装・土木など、建物に関わる幅広い工事に対応しています。
-</p>
+<p>電気・水道・サッシ・塗装・土木など、建物に関わる幅広い工事に対応しています。</p>
 <ul>
 <li>電気工事</li>
 <li>水道設備工事</li>
@@ -238,9 +253,7 @@ RH HOME
 大規模な改修まで。
 </h2>
 
-<p>
-神奈川を中心に関東エリアで対応しております。
-</p>
+<p>神奈川を中心に関東エリアで対応しております。</p>
 
 <div class="buttons" style="justify-content:center;">
 <a href="tel:0120897390" class="btn primary">0120-897-390</a>
@@ -279,23 +292,3 @@ Instagram　@rhhome_yamato
 
 </body>
 </html>
-.service-note{
-text-align:center;
-margin-top:70px;
-}
-
-.service-note p{
-font-size:15px;
-line-height:2.4;
-color:#d4d4d4;
-}
-.service-note{
-text-align:center;
-margin-top:70px;
-}
-
-.service-note p{
-font-size:15px;
-line-height:2.4;
-color:#d4d4d4;
-}
