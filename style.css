@@ -1,3 +1,14 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>事業内容｜株式会社アールエイチホーム</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Noto+Serif+JP:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
 *{
 margin:0;
 padding:0;
@@ -7,29 +18,14 @@ box-sizing:border-box;
 html{
 scroll-behavior:smooth;
 overflow-x:hidden;
-width:100%;
 }
 
 body{
 font-family:"Noto Serif JP",serif;
-background:#121212;
-color:#fff;
-line-height:2;
-letter-spacing:.05em;
+background:#f3f1ec;
+color:#111;
 overflow-x:hidden;
-width:100%;
-max-width:100vw;
-}
-
-a{
-text-decoration:none;
-color:inherit;
-}
-
-img{
-width:100%;
-display:block;
-object-fit:cover;
+line-height:2;
 }
 
 /* =========================
@@ -41,42 +37,45 @@ position:fixed;
 top:0;
 left:0;
 width:100%;
-z-index:999;
+height:78px;
+padding:0 4%;
 display:flex;
 justify-content:space-between;
 align-items:center;
-padding:22px 5%;
-background:transparent;
-backdrop-filter:none;
-color:#fff;
+background:rgba(0,0,0,.82);
+backdrop-filter:blur(10px);
+border-bottom:1px solid rgba(255,255,255,.08);
+z-index:999;
+transition:transform .35s ease;
+}
+
+.header.hide{
+transform:translateY(-100%);
 }
 
 .logo{
-font-family:'Bebas Neue',sans-serif;
-font-size:58px;
-font-weight:400;
-letter-spacing:.08em;
-line-height:1;
-white-space:nowrap;
+display:flex;
+align-items:center;
+text-decoration:none;
 }
 
-.logo span{
+.logo img{
+width:220px;
+height:48px;
+object-fit:contain;
 display:block;
-font-size:11px;
-font-weight:400;
-color:#b8a46a;
-margin-top:10px;
-letter-spacing:.12em;
 }
 
 .nav{
 display:flex;
-gap:28px;
-font-size:13px;
-letter-spacing:.11em;
+gap:42px;
 }
 
 .nav a{
+font-size:14px;
+letter-spacing:.12em;
+color:#fff;
+text-decoration:none;
 position:relative;
 transition:.3s;
 }
@@ -101,9 +100,9 @@ width:100%;
 }
 
 .tel{
-font-size:25px;
-font-weight:500;
+font-size:24px;
 letter-spacing:.04em;
+color:#fff;
 white-space:nowrap;
 }
 
@@ -111,627 +110,156 @@ white-space:nowrap;
 HERO
 ========================= */
 
-.hero{
-min-height:100vh;
-position:relative;
-display:flex;
-align-items:center;
-padding:140px 5% 80px;
-overflow:hidden;
-color:#fff;
-}
-
-.hero::before{
-content:"";
-position:absolute;
-inset:0;
-background:
-linear-gradient(
-90deg,
-rgba(0,0,0,.82) 0%,
-rgba(0,0,0,.62) 32%,
-rgba(0,0,0,.32) 60%,
-rgba(0,0,0,.12) 82%,
-rgba(0,0,0,.02) 100%
-),
-url("main.jpg") center/cover no-repeat;
-transform:scale(1.04);
-animation:zoom 13s ease-in-out infinite alternate;
-}
-
-@keyframes zoom{
-from{transform:scale(1.04);}
-to{transform:scale(1.1);}
-}
-
-.hero-inner{
-position:relative;
-z-index:2;
-max-width:720px;
-}
-
-.hero-sub{
-font-size:14px;
-color:#e0e0e0;
-letter-spacing:.14em;
-margin-bottom:28px;
-}
-
-.hero-line{
-width:90px;
-height:1px;
-background:rgba(255,255,255,.72);
-margin-bottom:38px;
-}
-
-.hero h1{
-font-size:clamp(34px,4.2vw,60px);
-font-weight:500;
-line-height:1.55;
-letter-spacing:.03em;
-margin-bottom:34px;
-}
-
-.hero p{
-font-size:16px;
-color:#d8d8d8;
-line-height:2.3;
-margin-bottom:48px;
-}
-
-/* =========================
-PAGE HERO
-========================= */
-
-.page-hero{
-padding:210px 5% 140px;
+.service-hero{
+padding:180px 5% 120px;
 text-align:center;
-position:relative;
-color:#fff;
-overflow:hidden;
-}
-
-.page-hero::before{
-content:"";
-position:absolute;
-inset:0;
 background:
-linear-gradient(rgba(0,0,0,.48),rgba(0,0,0,.62)),
+linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.7)),
 url("service-hero.jpg") center/cover no-repeat;
-z-index:-1;
+color:#fff;
 }
 
-.company-hero::before{
-background:
-linear-gradient(rgba(0,0,0,.48),rgba(0,0,0,.62)),
-url("company-hero.jpg") center/cover no-repeat;
-}
-
-.page-hero small{
+.service-hero small{
 display:block;
-font-size:13px;
-letter-spacing:.35em;
+font-size:15px;
+letter-spacing:.3em;
 color:#b8a46a;
-margin-bottom:20px;
+margin-bottom:16px;
 }
 
-.page-hero h1{
-font-size:64px;
+.service-hero h1{
+font-size:62px;
 font-weight:500;
 letter-spacing:.12em;
-}
-
-/* =========================
-BUTTON
-========================= */
-
-.buttons{
-display:flex;
-gap:18px;
-flex-wrap:wrap;
-}
-
-.btn{
-display:inline-flex;
-align-items:center;
-justify-content:center;
-padding:15px 36px;
-border:1px solid rgba(255,255,255,.26);
-background:rgba(255,255,255,.035);
-font-size:13px;
-letter-spacing:.12em;
-transition:.35s;
-min-width:200px;
-color:#fff;
-cursor:pointer;
-}
-
-.btn.primary{
-background:#fff;
-color:#111;
-border-color:#fff;
-}
-
-.btn:hover{
-background:#b8a46a;
-color:#111;
-border-color:#b8a46a;
-transform:translateY(-2px);
 }
 
 /* =========================
 SECTION
 ========================= */
 
-.section{
-position:relative;
-padding:125px 5%;
-background:linear-gradient(180deg,#1c1c1c,#171717);
+.service-section{
+padding:100px 5%;
+background:#f3f1ec;
 }
 
-.section::before{
-content:"";
-position:absolute;
-top:0;
-left:5%;
-right:5%;
-height:1px;
-background:linear-gradient(90deg,transparent,rgba(184,164,106,.35),transparent);
-}
-
-.works-section{
-background:linear-gradient(180deg,#242424,#181818);
-overflow:hidden;
-}
-
-.section-title{
+.service-intro{
+max-width:920px;
+margin:0 auto 70px;
 text-align:center;
-margin-bottom:78px;
 }
 
-.section-title small{
+.service-intro small{
 display:block;
-font-size:13px;
-letter-spacing:.32em;
+font-size:14px;
+letter-spacing:.28em;
 color:#b8a46a;
-margin-bottom:16px;
+margin-bottom:20px;
 }
 
-.section-title h2{
-font-size:38px;
+.service-intro h2{
+font-size:50px;
 font-weight:500;
-letter-spacing:.12em;
+line-height:1.8;
+margin-bottom:28px;
+letter-spacing:.06em;
+}
+
+.service-intro p{
+font-size:16px;
+line-height:2.5;
+color:#444;
 }
 
 /* =========================
 CARD
 ========================= */
 
-.grid-4{
-display:grid;
-grid-template-columns:repeat(4,1fr);
-gap:26px;
-}
-
-.card{
-background:linear-gradient(145deg,#2c2c2c,#181818);
-border:1px solid rgba(255,255,255,.11);
-padding:0 0 36px;
-transition:.4s;
-overflow:hidden;
-box-shadow:0 24px 70px rgba(0,0,0,.32);
-border-radius:6px;
-}
-
-.card:hover{
-transform:translateY(-8px);
-border-color:rgba(184,164,106,.75);
-}
-
-.card img{
-height:220px;
-margin-bottom:28px;
-filter:brightness(.94);
-transition:1s;
-}
-
-.card:hover img{
-filter:brightness(1);
-transform:scale(1.04);
-}
-
-.card h3{
-font-size:21px;
-font-weight:500;
-margin:0 28px 16px;
-}
-
-.card p{
-font-size:14px;
-color:#d4d4d4;
-line-height:2.1;
-margin:0 28px;
-}
-
-/* =========================
-SERVICE
-========================= */
-
 .service-list{
+max-width:1250px;
+margin:0 auto;
 display:flex;
 flex-direction:column;
-gap:96px;
+gap:18px;
 }
 
-.service-row{
+.service-card{
 display:grid;
-grid-template-columns:1fr 1fr;
-gap:64px;
+grid-template-columns:110px 1.1fr 1.4fr;
+gap:40px;
 align-items:center;
+background:#fff;
+border:1px solid #e1ddd5;
+padding:34px 40px;
+box-shadow:0 8px 26px rgba(0,0,0,.06);
+transition:.3s;
 }
 
-.service-row.reverse .service-image{
-order:2;
+.service-card:hover{
+transform:translateY(-4px);
+box-shadow:0 18px 38px rgba(0,0,0,.08);
 }
 
-.service-row.reverse .service-text{
-order:1;
-padding-left:80px;
+.service-number{
+font-family:"Bebas Neue",sans-serif;
+font-size:64px;
+color:#b8a46a;
+line-height:1;
+border-right:1px solid #ddd2b0;
+padding-right:22px;
 }
 
-.service-image{
-overflow:hidden;
-height:285px;
-background:#111;
-border:1px solid rgba(255,255,255,.1);
-border-radius:6px;
-box-shadow:0 24px 70px rgba(0,0,0,.28);
+.service-content h3{
+font-size:32px;
+font-weight:600;
+margin-bottom:14px;
+letter-spacing:.06em;
 }
 
-.service-image img{
-width:100%;
-height:100%;
-transition:1s;
-filter:brightness(.94);
-}
-
-.service-row:hover .service-image img{
-transform:scale(1.05);
-filter:brightness(1);
-}
-
-.service-text h3{
-font-size:34px;
-font-weight:500;
-margin-bottom:22px;
-letter-spacing:.05em;
-}
-
-.service-text p{
+.service-content p{
 font-size:15px;
-line-height:2.4;
-color:#d4d4d4;
+line-height:2.3;
+color:#444;
 }
 
-/* =========================
-CONCEPT
-========================= */
+.service-menu{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:10px 30px;
+list-style:none;
+}
 
-.concept-section{
+.service-menu li{
+font-size:14px;
+color:#333;
 position:relative;
-padding:135px 5%;
-background:linear-gradient(180deg,#181818,#202020);
-text-align:center;
+padding-left:14px;
+line-height:2;
 }
 
-.concept-section::before{
+.service-menu li::before{
 content:"";
 position:absolute;
-top:0;
-left:5%;
-right:5%;
-height:1px;
-background:linear-gradient(90deg,transparent,rgba(184,164,106,.35),transparent);
-}
-
-.concept-inner{
-max-width:920px;
-margin:0 auto;
-}
-
-.concept-inner small{
-display:block;
-font-size:13px;
-letter-spacing:.32em;
-color:#b8a46a;
-margin-bottom:22px;
-}
-
-.concept-inner h2{
-font-size:38px;
-font-weight:500;
-letter-spacing:.08em;
-line-height:1.8;
-margin-bottom:34px;
-}
-
-.concept-inner p{
-font-size:15px;
-color:#d4d4d4;
-line-height:2.65;
-margin-bottom:28px;
-}
-
-/* =========================
-WORKS
-========================= */
-
-.works-slider{
-overflow-x:auto;
-padding-bottom:12px;
-}
-
-.works-slider::-webkit-scrollbar{
-height:6px;
-}
-
-.works-slider::-webkit-scrollbar-thumb{
-background:rgba(255,255,255,.25);
-border-radius:10px;
-}
-
-.works-track{
-display:flex;
-gap:28px;
-width:max-content;
-animation:worksScroll 45s linear infinite;
-}
-
-.works-slider:hover .works-track{
-animation-play-state:paused;
-}
-
-@keyframes worksScroll{
-0%{
-transform:translateX(0);
-}
-100%{
-transform:translateX(-45%);
-}
-}
-
-.works-slide{
-width:420px;
-background:linear-gradient(145deg,#303030,#1c1c1c);
-border:1px solid rgba(255,255,255,.12);
-overflow:hidden;
-box-shadow:0 22px 65px rgba(0,0,0,.3);
-flex-shrink:0;
-border-radius:6px;
-}
-
-.works-slide img{
-height:300px;
-transition:1s;
-filter:brightness(.9);
-}
-
-.works-slide:hover img{
-transform:scale(1.06);
-filter:brightness(1);
-}
-
-.works-slide h3{
-font-size:21px;
-font-weight:500;
-margin:24px 24px 10px;
-}
-
-.works-slide p{
-font-size:14px;
-color:#d4d4d4;
-line-height:2;
-margin:0 24px 28px;
-}
-
-/* =========================
-INSTAGRAM
-========================= */
-
-.instagram-text{
-font-size:15px;
-color:#d4d4d4;
-line-height:2.2;
-margin-bottom:28px;
-letter-spacing:.05em;
-}
-
-.instagram-button{
-display:inline-flex;
-align-items:center;
-gap:12px;
-padding:16px 32px;
-border:1px solid #b8a46a;
-color:#fff;
-text-decoration:none;
-font-size:15px;
-letter-spacing:0.08em;
-transition:0.3s;
-}
-
-.instagram-button:hover{
+left:0;
+top:14px;
+width:4px;
+height:4px;
 background:#b8a46a;
-color:#111;
-transform:translateY(-2px);
+border-radius:50%;
 }
 
 /* =========================
-COMPANY
+NOTE
 ========================= */
 
-.company-section{
-background:linear-gradient(180deg,#222,#1a1a1a);
-}
-
-.company-intro{
-max-width:920px;
-margin:0 auto 80px;
+.service-note{
+margin-top:70px;
 text-align:center;
 }
 
-.company-intro small{
-display:block;
-font-size:13px;
-letter-spacing:.32em;
-color:#b8a46a;
-margin-bottom:22px;
-}
-
-.company-intro h2{
-font-size:38px;
-font-weight:500;
-letter-spacing:.08em;
-line-height:1.8;
-margin-bottom:32px;
-}
-
-.company-intro p{
-font-size:15px;
-color:#d4d4d4;
-line-height:2.6;
-margin-bottom:22px;
-}
-
-.company-table{
-max-width:980px;
-margin:0 auto;
-border-top:1px solid rgba(255,255,255,.16);
-background:rgba(255,255,255,.02);
-border-radius:6px;
-overflow:hidden;
-box-shadow:0 24px 70px rgba(0,0,0,.22);
-}
-
-.company-row{
-display:grid;
-grid-template-columns:220px 1fr;
-border-bottom:1px solid rgba(255,255,255,.14);
-}
-
-.company-head{
-padding:24px 26px;
-color:#b8a46a;
-font-size:14px;
-letter-spacing:.12em;
-background:rgba(255,255,255,.055);
-}
-
-.company-data{
-padding:24px 30px;
-color:#e0e0e0;
-font-size:15px;
-line-height:2;
-}
-
-/* =========================
-CONTACT
-========================= */
-
-.contact-section{
-background:linear-gradient(180deg,#1c1c1c,#171717);
-}
-
-.contact-intro{
-max-width:900px;
-margin:0 auto 70px;
-text-align:center;
-}
-
-.contact-intro h2{
-font-size:34px;
-font-weight:500;
-line-height:1.8;
-letter-spacing:.08em;
-margin-bottom:24px;
-}
-
-.contact-intro p{
-font-size:15px;
-color:#d4d4d4;
-line-height:2.4;
-}
-
-.contact-wrap{
-max-width:1100px;
-margin:0 auto;
-display:grid;
-grid-template-columns:.9fr 1.1fr;
-gap:50px;
-align-items:start;
-}
-
-.contact-info,
-.contact-form{
-background:linear-gradient(145deg,#303030,#202020);
-border:1px solid rgba(255,255,255,.13);
-box-shadow:0 22px 60px rgba(0,0,0,.24);
-border-radius:6px;
-padding:40px;
-}
-
-.contact-info h3{
-font-size:24px;
-font-weight:500;
-margin-bottom:18px;
-}
-
-.contact-info p{
-font-size:14px;
-color:#d4d4d4;
-line-height:2.2;
-}
-
-.contact-tel{
-display:block;
-font-size:34px;
-letter-spacing:.05em;
-margin:24px 0 10px;
-color:#b8a46a;
-}
-
-.contact-time{
-font-size:13px;
-color:#aaa;
-}
-
-.contact-form label{
-display:block;
-font-size:14px;
-color:#ddd;
-margin-bottom:22px;
-}
-
-.contact-form input,
-.contact-form textarea{
-width:100%;
-margin-top:8px;
-padding:16px;
-background:#151515;
-border:1px solid rgba(255,255,255,.16);
-color:#fff;
-font-family:inherit;
-font-size:15px;
-border-radius:4px;
-}
-
-.contact-form textarea{
-height:180px;
-resize:vertical;
-}
-
-.contact-submit{
-text-align:center;
-margin-top:36px;
+.service-note p{
+font-size:16px;
+line-height:2.5;
+color:#444;
 }
 
 /* =========================
@@ -739,25 +267,55 @@ CTA
 ========================= */
 
 .cta{
-padding:145px 5%;
+padding:140px 5%;
 text-align:center;
 background:
 linear-gradient(rgba(0,0,0,.72),rgba(0,0,0,.82)),
 url("room.jpg") center/cover no-repeat;
+color:#fff;
 }
 
 .cta h2{
-font-size:42px;
+font-size:54px;
 font-weight:500;
 line-height:1.7;
-letter-spacing:.08em;
-margin-bottom:28px;
+margin-bottom:24px;
 }
 
 .cta p{
 font-size:16px;
-color:#d0d0d0;
+color:#d7d7d7;
 margin-bottom:40px;
+}
+
+.buttons{
+display:flex;
+justify-content:center;
+gap:20px;
+flex-wrap:wrap;
+}
+
+.btn{
+display:inline-flex;
+align-items:center;
+justify-content:center;
+padding:16px 38px;
+min-width:240px;
+border:1px solid rgba(255,255,255,.25);
+color:#fff;
+text-decoration:none;
+transition:.3s;
+}
+
+.btn.primary{
+background:#fff;
+color:#111;
+}
+
+.btn:hover{
+background:#b8a46a;
+border-color:#b8a46a;
+color:#111;
 }
 
 /* =========================
@@ -765,74 +323,80 @@ FOOTER
 ========================= */
 
 .footer{
-background:#0f0f0f;
+background:
+linear-gradient(rgba(0,0,0,.84),rgba(0,0,0,.92)),
+url("service-hero.jpg") center/cover no-repeat;
+color:#fff;
+padding-top:48px;
 border-top:1px solid rgba(255,255,255,.08);
 }
 
 .footer-inner{
-max-width:1200px;
+max-width:1250px;
 margin:0 auto;
-padding:55px 5%;
-display:flex;
-justify-content:space-between;
+padding:0 5% 42px;
+display:grid;
+grid-template-columns:1fr auto auto;
+gap:60px;
 align-items:center;
-gap:40px;
 }
 
 .footer-logo{
-font-size:40px;
-font-weight:700;
-letter-spacing:.06em;
-margin-bottom:16px;
-line-height:1;
-text-transform:uppercase;
-}
-
-.footer-brand p{
-font-size:13px;
-line-height:2.1;
-color:#9f9f9f;
-}
-
-.footer-contact{
 display:flex;
 flex-direction:column;
-align-items:flex-end;
-gap:16px;
+gap:14px;
+}
+
+.footer-logo img{
+width:240px;
+height:52px;
+object-fit:contain;
+display:block;
+}
+
+.footer-logo p{
+font-size:13px;
+line-height:2.1;
+color:#ddd;
 }
 
 .footer-tel{
-font-size:28px;
-letter-spacing:.08em;
+font-size:38px;
 color:#fff;
 text-decoration:none;
-transition:.3s;
-}
-
-.footer-tel:hover{
-opacity:.7;
+letter-spacing:.04em;
+white-space:nowrap;
 }
 
 .footer-instagram{
-font-size:14px;
-letter-spacing:.08em;
-color:#b8a46a;
+display:flex;
+align-items:center;
+gap:18px;
+padding-left:34px;
+border-left:1px solid rgba(255,255,255,.2);
 text-decoration:none;
-transition:.3s;
+color:#fff;
 }
 
-.footer-instagram:hover{
-opacity:.7;
+.footer-instagram small{
+display:block;
+font-size:13px;
+color:#b8a46a;
+letter-spacing:.08em;
+margin-bottom:2px;
+}
+
+.footer-instagram span{
+font-size:18px;
 }
 
 .footer-bottom{
-border-top:1px solid rgba(255,255,255,.06);
-padding:18px 5%;
+border-top:1px solid rgba(255,255,255,.08);
 text-align:center;
-font-size:11px;
-letter-spacing:.12em;
-color:#777;
-background:#0f0f0f;
+padding:20px;
+font-size:12px;
+color:#aaa;
+letter-spacing:.08em;
 }
 
 /* =========================
@@ -841,189 +405,314 @@ MOBILE
 
 @media(max-width:1100px){
 
+.header{
+height:auto;
+padding:16px 5%;
+}
+
 .nav,
 .tel{
 display:none;
 }
 
-.logo{
-font-size:28px;
+.logo img{
+width:180px;
+height:auto;
 }
 
-.logo span{
-font-size:9px;
+.service-hero{
+padding:150px 5% 90px;
 }
 
-.page-hero{
-padding:170px 5% 100px;
-}
-
-.page-hero h1{
+.service-hero h1{
 font-size:42px;
 }
 
-.hero{
-padding:120px 5% 70px;
-}
-
-.hero h1{
-font-size:29px;
-}
-
-.hero p{
-font-size:13px;
-}
-
-.section{
-padding:90px 5%;
-}
-
-.grid-4{
-grid-template-columns:1fr;
-}
-
-.service-row{
-grid-template-columns:1fr;
-gap:30px;
-}
-
-.service-row.reverse .service-image,
-.service-row.reverse .service-text{
-order:initial;
-padding-left:0;
-}
-
-.service-image{
-height:220px;
-}
-
-.service-text h3{
-font-size:24px;
-}
-
-.service-text p{
-font-size:13px;
-line-height:2.1;
-}
-
-.concept-section{
-padding:90px 5%;
-}
-
-.concept-inner h2{
-font-size:26px;
-line-height:1.7;
-}
-
-.concept-inner p{
-font-size:13px;
-line-height:2.2;
-}
-
-.works-slide{
-width:82vw;
-}
-
-.works-slide img{
-height:220px;
-}
-
-.works-slide h3{
-font-size:20px;
-}
-
-.works-slide p{
-font-size:13px;
-}
-
-.company-intro h2{
-font-size:26px;
-line-height:1.7;
-}
-
-.company-intro p{
-font-size:13px;
-line-height:2.2;
-}
-
-.company-row{
-grid-template-columns:1fr;
-}
-
-.company-head{
-padding:18px 20px 8px;
-background:transparent;
-}
-
-.company-data{
-padding:0 20px 18px;
-font-size:13px;
-}
-
-.contact-wrap{
-grid-template-columns:1fr;
-}
-
-.contact-intro h2{
-font-size:26px;
-}
-
-.contact-info,
-.contact-form{
-padding:28px 22px;
-}
-
-.contact-tel{
-font-size:28px;
-}
-
-.cta{
-padding:100px 5%;
-}
-
-.cta h2{
-font-size:28px;
-}
-
-.footer-inner{
-flex-direction:column;
-align-items:flex-start;
-padding:45px 5%;
-gap:30px;
-}
-
-.footer-contact{
-align-items:flex-start;
-}
-
-.footer-logo{
+.service-intro h2{
 font-size:32px;
 }
 
-.footer-tel{
+.service-card{
+grid-template-columns:1fr;
+gap:24px;
+padding:28px 22px;
+}
+
+.service-number{
+border-right:none;
+border-bottom:1px solid #ddd2b0;
+padding-right:0;
+padding-bottom:14px;
+}
+
+.service-content h3{
 font-size:24px;
 }
 
-}
-.service-light{
-background:#f3f1ec;
-color:#222;
+.service-menu{
+grid-template-columns:1fr;
 }
 
-.service-light .company-intro p,
-.service-light .service-card p,
-.service-light .service-note p,
-.service-light li{
-color:#555;
+.cta h2{
+font-size:34px;
 }
 
-.service-light .service-card{
-background:#fff;
-border:1px solid #ddd;
-box-shadow:0 10px 40px rgba(0,0,0,.08);
+.footer-inner{
+grid-template-columns:1fr;
+gap:34px;
+text-align:left;
 }
 
-.service-light h2,
-.service-light h3{
-color:#111;
+.footer-instagram{
+padding-left:0;
+border-left:none;
 }
+
+.footer-logo img{
+width:180px;
+}
+
+.footer-tel{
+font-size:28px;
+}
+}
+
+</style>
+</head>
+
+<body>
+
+<header class="header" id="header">
+
+<a href="index.html" class="logo">
+<img src="rh-logo.png" alt="RH HOME">
+</a>
+
+<nav class="nav">
+<a href="index.html">ホーム</a>
+<a href="service.html">事業内容</a>
+<a href="works.html">施工事例</a>
+<a href="company.html">会社案内</a>
+<a href="contact.html">お問い合わせ</a>
+</nav>
+
+<div class="tel">0120-897-390</div>
+
+</header>
+
+<section class="service-hero">
+
+<small>SERVICE</small>
+
+<h1>事業内容</h1>
+
+</section>
+
+<section class="service-section">
+
+<div class="service-intro">
+
+<small>SERVICE MENU</small>
+
+<h2>
+リフォーム・リノベーションなら、<br>
+幅広く対応しています。
+</h2>
+
+<p>
+住宅・マンション・店舗を問わず、内装工事から外装・外構、設備工事まで。<br>
+小さな修繕から大規模な改修まで、内容に合わせて柔軟に対応いたします。
+</p>
+
+</div>
+
+<div class="service-list">
+
+<div class="service-card">
+
+<div class="service-number">01</div>
+
+<div class="service-content">
+<h3>住宅・マンション工事</h3>
+<p>
+戸建住宅やマンションの改修、間取り変更、内装リフォームまで、
+暮らし方に合わせた住空間づくりを行います。
+</p>
+</div>
+
+<ul class="service-menu">
+<li>フルリノベーション</li>
+<li>間取り変更</li>
+<li>中古マンションリノベーション</li>
+<li>戸建てリフォーム</li>
+<li>内装改修</li>
+<li>収納造作</li>
+<li>建具交換</li>
+</ul>
+
+</div>
+
+<div class="service-card">
+
+<div class="service-number">02</div>
+
+<div class="service-content">
+<h3>水まわり工事</h3>
+<p>
+キッチン・浴室・トイレ・洗面など、
+毎日使う場所だからこそ使いやすさを大切に施工します。
+</p>
+</div>
+
+<ul class="service-menu">
+<li>キッチン交換</li>
+<li>浴室交換</li>
+<li>ユニットバスリフォーム</li>
+<li>トイレ交換</li>
+<li>洗面台交換</li>
+<li>水道設備工事</li>
+<li>給排水工事</li>
+</ul>
+
+</div>
+
+<div class="service-card">
+
+<div class="service-number">03</div>
+
+<div class="service-content">
+<h3>内装工事</h3>
+<p>
+壁・床・天井・建具など、
+空間の印象を左右する内装工事にも対応しています。
+</p>
+</div>
+
+<ul class="service-menu">
+<li>壁紙・クロス張り替え</li>
+<li>床張り替え</li>
+<li>フローリング工事</li>
+<li>内装床仕上工事</li>
+<li>木工事</li>
+<li>大工工事</li>
+<li>防音工事</li>
+</ul>
+
+</div>
+
+<div class="service-card">
+
+<div class="service-number">04</div>
+
+<div class="service-content">
+<h3>外装・外構工事</h3>
+<p>
+外壁・屋根・門まわり・フェンスなど、
+建物の印象と機能性を高める工事にも対応しています。
+</p>
+</div>
+
+<ul class="service-menu">
+<li>外壁塗装</li>
+<li>屋根工事</li>
+<li>外構工事</li>
+<li>エクステリア工事</li>
+<li>フェンス工事</li>
+<li>門柱・アプローチ</li>
+<li>ウッドデッキ</li>
+<li>カーポート</li>
+</ul>
+
+</div>
+
+</div>
+
+<div class="service-note">
+
+<p>
+上記以外の工事にも対応可能です。<br>
+「これも頼めるかな？」という内容でも、まずはお気軽にご相談ください。
+</p>
+
+</div>
+
+</section>
+
+<section class="cta">
+
+<h2>
+小さな工事から、<br>
+大規模な改修まで。
+</h2>
+
+<p>
+神奈川を中心に関東エリアで対応しております。
+</p>
+
+<div class="buttons">
+<a href="tel:0120897390" class="btn primary">0120-897-390</a>
+<a href="contact.html" class="btn">お問い合わせフォーム</a>
+</div>
+
+</section>
+
+<footer class="footer">
+
+<div class="footer-inner">
+
+<div class="footer-logo">
+
+<img src="rh-logo.png" alt="RH HOME">
+
+<p>
+株式会社アールエイチホーム<br>
+リフォーム・リノベーション / 店舗内装工事<br>
+神奈川を中心に関東エリア対応
+</p>
+
+</div>
+
+<a href="tel:0120897390" class="footer-tel">
+0120-897-390
+</a>
+
+<a href="https://www.instagram.com/rhhome_yamato/" target="_blank" class="footer-instagram">
+
+<div>
+<small>Instagram</small>
+<span>@rhhome_yamato</span>
+</div>
+
+</a>
+
+</div>
+
+<div class="footer-bottom">
+© RH HOME All Rights Reserved.
+</div>
+
+</footer>
+
+<script>
+
+let lastScroll = 0;
+const header = document.getElementById("header");
+
+window.addEventListener("scroll", () => {
+
+const currentScroll = window.pageYOffset;
+
+if(currentScroll > lastScroll && currentScroll > 120){
+header.classList.add("hide");
+}else{
+header.classList.remove("hide");
+}
+
+lastScroll = currentScroll;
+
+});
+
+</script>
+
+</body>
+</html>
