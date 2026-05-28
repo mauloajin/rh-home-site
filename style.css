@@ -3,6 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>事業内容｜株式会社アールエイチホーム</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Noto+Serif+JP:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -22,7 +23,7 @@ overflow-x:hidden;
 
 body{
 font-family:"Noto Serif JP",serif;
-background:#f3f1ec;
+background:#f5f2eb;
 color:#111;
 overflow-x:hidden;
 line-height:2;
@@ -37,36 +38,47 @@ position:fixed;
 top:0;
 left:0;
 width:100%;
-height:78px;
-padding:0 4%;
+padding:22px 4%;
 display:flex;
 justify-content:space-between;
-align-items:center;
-background:rgba(0,0,0,.82);
-backdrop-filter:blur(10px);
-border-bottom:1px solid rgba(255,255,255,.08);
+align-items:flex-start;
 z-index:999;
-transition:transform .35s ease;
+transition:.4s;
+background:transparent;
 }
 
 .header.hide{
-transform:translateY(-100%);
+transform:translateY(-120%);
+}
+
+.logo-wrap{
+display:flex;
+flex-direction:column;
+align-items:flex-start;
 }
 
 .logo{
-display:flex;
-align-items:center;
-text-decoration:none;
-}
-
-.logo img{
-width:220px;
-height:48px;
-object-fit:contain;
 display:block;
 }
 
+.logo img{
+width:240px;
+display:block;
+}
+
+.logo-sub{
+font-size:12px;
+letter-spacing:.24em;
+color:#b8a46a;
+margin-top:10px;
+padding-left:2px;
+}
+
 .nav{
+position:absolute;
+left:50%;
+top:36px;
+transform:translateX(-50%);
 display:flex;
 gap:42px;
 }
@@ -100,9 +112,11 @@ width:100%;
 }
 
 .tel{
-font-size:24px;
+font-size:28px;
 letter-spacing:.04em;
 color:#fff;
+line-height:1;
+margin-top:8px;
 white-space:nowrap;
 }
 
@@ -111,12 +125,29 @@ HERO
 ========================= */
 
 .service-hero{
-padding:180px 5% 120px;
+height:530px;
+position:relative;
+display:flex;
+align-items:center;
+justify-content:center;
 text-align:center;
-background:
-linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.7)),
-url("service-hero.jpg") center/cover no-repeat;
+overflow:hidden;
 color:#fff;
+}
+
+.service-hero::before{
+content:"";
+position:absolute;
+inset:0;
+background:
+linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.65)),
+url("service-hero.jpg") center/cover no-repeat;
+transform:scale(1.03);
+}
+
+.service-hero-inner{
+position:relative;
+z-index:2;
 }
 
 .service-hero small{
@@ -124,28 +155,24 @@ display:block;
 font-size:15px;
 letter-spacing:.3em;
 color:#b8a46a;
-margin-bottom:16px;
+margin-bottom:18px;
 }
 
 .service-hero h1{
-font-size:62px;
+font-size:72px;
 font-weight:500;
 letter-spacing:.12em;
 }
 
 /* =========================
-SECTION
+INTRO
 ========================= */
 
-.service-section{
-padding:100px 5%;
-background:#f3f1ec;
-}
-
 .service-intro{
-max-width:920px;
-margin:0 auto 70px;
+padding:110px 5% 70px;
 text-align:center;
+max-width:1200px;
+margin:0 auto;
 }
 
 .service-intro small{
@@ -153,63 +180,64 @@ display:block;
 font-size:14px;
 letter-spacing:.28em;
 color:#b8a46a;
-margin-bottom:20px;
+margin-bottom:24px;
 }
 
 .service-intro h2{
-font-size:50px;
+font-size:56px;
 font-weight:500;
-line-height:1.8;
-margin-bottom:28px;
-letter-spacing:.06em;
+line-height:1.7;
+margin-bottom:30px;
+letter-spacing:.04em;
 }
 
 .service-intro p{
-font-size:16px;
+font-size:18px;
 line-height:2.5;
 color:#444;
 }
 
 /* =========================
-CARD
+SERVICE LIST
 ========================= */
 
 .service-list{
-max-width:1250px;
+max-width:1350px;
 margin:0 auto;
+padding:0 5% 120px;
 display:flex;
 flex-direction:column;
 gap:18px;
 }
 
 .service-card{
-display:grid;
-grid-template-columns:110px 1.1fr 1.4fr;
-gap:40px;
-align-items:center;
 background:#fff;
-border:1px solid #e1ddd5;
-padding:34px 40px;
-box-shadow:0 8px 26px rgba(0,0,0,.06);
+border:1px solid #e8e1d3;
+display:grid;
+grid-template-columns:120px 1.2fr 1.3fr;
+gap:40px;
+padding:38px 40px;
+align-items:center;
+box-shadow:0 6px 18px rgba(0,0,0,.04);
 transition:.3s;
 }
 
 .service-card:hover{
 transform:translateY(-4px);
-box-shadow:0 18px 38px rgba(0,0,0,.08);
+box-shadow:0 18px 34px rgba(0,0,0,.08);
 }
 
 .service-number{
 font-family:"Bebas Neue",sans-serif;
-font-size:64px;
+font-size:72px;
 color:#b8a46a;
 line-height:1;
-border-right:1px solid #ddd2b0;
-padding-right:22px;
+padding-right:24px;
+border-right:1px solid #ddd0af;
 }
 
 .service-content h3{
-font-size:32px;
+font-size:36px;
 font-weight:600;
 margin-bottom:14px;
 letter-spacing:.06em;
@@ -229,8 +257,8 @@ list-style:none;
 }
 
 .service-menu li{
-font-size:14px;
-color:#333;
+font-size:15px;
+color:#222;
 position:relative;
 padding-left:14px;
 line-height:2;
@@ -240,7 +268,7 @@ line-height:2;
 content:"";
 position:absolute;
 left:0;
-top:14px;
+top:15px;
 width:4px;
 height:4px;
 background:#b8a46a;
@@ -252,12 +280,12 @@ NOTE
 ========================= */
 
 .service-note{
-margin-top:70px;
 text-align:center;
+padding:0 5% 110px;
 }
 
 .service-note p{
-font-size:16px;
+font-size:17px;
 line-height:2.5;
 color:#444;
 }
@@ -267,7 +295,7 @@ CTA
 ========================= */
 
 .cta{
-padding:140px 5%;
+padding:150px 5%;
 text-align:center;
 background:
 linear-gradient(rgba(0,0,0,.72),rgba(0,0,0,.82)),
@@ -276,16 +304,16 @@ color:#fff;
 }
 
 .cta h2{
-font-size:54px;
+font-size:60px;
 font-weight:500;
 line-height:1.7;
 margin-bottom:24px;
 }
 
 .cta p{
-font-size:16px;
+font-size:17px;
 color:#d7d7d7;
-margin-bottom:40px;
+margin-bottom:42px;
 }
 
 .buttons{
@@ -299,12 +327,14 @@ flex-wrap:wrap;
 display:inline-flex;
 align-items:center;
 justify-content:center;
-padding:16px 38px;
+padding:17px 42px;
 min-width:240px;
 border:1px solid rgba(255,255,255,.25);
-color:#fff;
 text-decoration:none;
+color:#fff;
 transition:.3s;
+font-size:14px;
+letter-spacing:.12em;
 }
 
 .btn.primary{
@@ -324,54 +354,48 @@ FOOTER
 
 .footer{
 background:
-linear-gradient(rgba(0,0,0,.84),rgba(0,0,0,.92)),
+linear-gradient(rgba(0,0,0,.86),rgba(0,0,0,.9)),
 url("service-hero.jpg") center/cover no-repeat;
 color:#fff;
-padding-top:48px;
-border-top:1px solid rgba(255,255,255,.08);
+padding-top:52px;
 }
 
 .footer-inner{
-max-width:1250px;
+max-width:1350px;
 margin:0 auto;
-padding:0 5% 42px;
+padding:0 5% 40px;
 display:grid;
 grid-template-columns:1fr auto auto;
 gap:60px;
 align-items:center;
 }
 
-.footer-logo{
-display:flex;
-flex-direction:column;
-gap:14px;
-}
-
-.footer-logo img{
+.footer-left img{
 width:240px;
-height:52px;
-object-fit:contain;
 display:block;
+margin-bottom:20px;
 }
 
-.footer-logo p{
-font-size:13px;
-line-height:2.1;
+.footer-left p{
+font-size:14px;
+line-height:2.2;
 color:#ddd;
 }
 
 .footer-tel{
-font-size:38px;
+display:flex;
+align-items:center;
+gap:16px;
+font-size:44px;
 color:#fff;
 text-decoration:none;
-letter-spacing:.04em;
 white-space:nowrap;
 }
 
 .footer-instagram{
 display:flex;
 align-items:center;
-gap:18px;
+gap:20px;
 padding-left:34px;
 border-left:1px solid rgba(255,255,255,.2);
 text-decoration:none;
@@ -380,23 +404,22 @@ color:#fff;
 
 .footer-instagram small{
 display:block;
-font-size:13px;
+font-size:14px;
 color:#b8a46a;
-letter-spacing:.08em;
 margin-bottom:2px;
 }
 
 .footer-instagram span{
-font-size:18px;
+font-size:22px;
 }
 
 .footer-bottom{
 border-top:1px solid rgba(255,255,255,.08);
+padding:22px;
 text-align:center;
-padding:20px;
 font-size:12px;
-color:#aaa;
-letter-spacing:.08em;
+letter-spacing:.12em;
+color:#bdbdbd;
 }
 
 /* =========================
@@ -406,8 +429,7 @@ MOBILE
 @media(max-width:1100px){
 
 .header{
-height:auto;
-padding:16px 5%;
+padding:18px 5%;
 }
 
 .nav,
@@ -417,50 +439,70 @@ display:none;
 
 .logo img{
 width:180px;
-height:auto;
+}
+
+.logo-sub{
+font-size:10px;
 }
 
 .service-hero{
-padding:150px 5% 90px;
+height:420px;
 }
 
 .service-hero h1{
-font-size:42px;
+font-size:46px;
+}
+
+.service-intro{
+padding:90px 5% 60px;
 }
 
 .service-intro h2{
-font-size:32px;
+font-size:34px;
+}
+
+.service-intro p{
+font-size:14px;
+line-height:2.2;
 }
 
 .service-card{
 grid-template-columns:1fr;
+padding:30px 24px;
 gap:24px;
-padding:28px 22px;
 }
 
 .service-number{
 border-right:none;
-border-bottom:1px solid #ddd2b0;
+border-bottom:1px solid #ddd0af;
 padding-right:0;
 padding-bottom:14px;
+font-size:58px;
 }
 
 .service-content h3{
-font-size:24px;
+font-size:26px;
 }
 
 .service-menu{
 grid-template-columns:1fr;
 }
 
+.cta{
+padding:110px 5%;
+}
+
 .cta h2{
-font-size:34px;
+font-size:36px;
 }
 
 .footer-inner{
 grid-template-columns:1fr;
-gap:34px;
-text-align:left;
+gap:36px;
+}
+
+.footer-left img{
+width:180px;
 }
 
 .footer-instagram{
@@ -468,12 +510,8 @@ padding-left:0;
 border-left:none;
 }
 
-.footer-logo img{
-width:180px;
-}
-
 .footer-tel{
-font-size:28px;
+font-size:30px;
 }
 }
 
@@ -484,9 +522,17 @@ font-size:28px;
 
 <header class="header" id="header">
 
+<div class="logo-wrap">
+
 <a href="index.html" class="logo">
 <img src="rh-logo.png" alt="RH HOME">
 </a>
+
+<div class="logo-sub">
+株式会社アールエイチホーム
+</div>
+
+</div>
 
 <nav class="nav">
 <a href="index.html">ホーム</a>
@@ -496,27 +542,30 @@ font-size:28px;
 <a href="contact.html">お問い合わせ</a>
 </nav>
 
-<div class="tel">0120-897-390</div>
+<div class="tel">
+0120-897-390
+</div>
 
 </header>
 
 <section class="service-hero">
 
+<div class="service-hero-inner">
+
 <small>SERVICE</small>
 
 <h1>事業内容</h1>
 
+</div>
+
 </section>
 
-<section class="service-section">
-
-<div class="service-intro">
+<section class="service-intro">
 
 <small>SERVICE MENU</small>
 
 <h2>
-リフォーム・リノベーションなら、<br>
-幅広く対応しています。
+リフォーム・リノベーションなら、幅広く対応しています。
 </h2>
 
 <p>
@@ -524,9 +573,9 @@ font-size:28px;
 小さな修繕から大規模な改修まで、内容に合わせて柔軟に対応いたします。
 </p>
 
-</div>
+</section>
 
-<div class="service-list">
+<section class="service-list">
 
 <div class="service-card">
 
@@ -625,16 +674,14 @@ font-size:28px;
 
 </div>
 
-</div>
+</section>
 
-<div class="service-note">
+<section class="service-note">
 
 <p>
 上記以外の工事にも対応可能です。<br>
 「これも頼めるかな？」という内容でも、まずはお気軽にご相談ください。
 </p>
-
-</div>
 
 </section>
 
@@ -650,8 +697,15 @@ font-size:28px;
 </p>
 
 <div class="buttons">
-<a href="tel:0120897390" class="btn primary">0120-897-390</a>
-<a href="contact.html" class="btn">お問い合わせフォーム</a>
+
+<a href="tel:0120897390" class="btn primary">
+0120-897-390
+</a>
+
+<a href="contact.html" class="btn">
+お問い合わせフォーム
+</a>
+
 </div>
 
 </section>
@@ -660,7 +714,7 @@ font-size:28px;
 
 <div class="footer-inner">
 
-<div class="footer-logo">
+<div class="footer-left">
 
 <img src="rh-logo.png" alt="RH HOME">
 
@@ -698,7 +752,7 @@ font-size:28px;
 let lastScroll = 0;
 const header = document.getElementById("header");
 
-window.addEventListener("scroll", () => {
+window.addEventListener("scroll",()=>{
 
 const currentScroll = window.pageYOffset;
 
