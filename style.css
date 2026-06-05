@@ -1140,9 +1140,9 @@ line-height:2.2;
 .instagram-text::after{
 content:"でもご紹介しています。";
 display:inline-block;
-min-height:24px;
-padding-left:116px;
-background:url("Instagramlogo.jpg") left center/104px auto no-repeat;
+min-height:26px;
+padding-left:38px;
+background:url("Instagramlogo.jpg") left center/34px 34px no-repeat;
 font-size:15px;
 line-height:2.2;
 }
@@ -1167,10 +1167,12 @@ display:none;
 .instagram-button::before{
 content:"";
 display:inline-block;
-width:104px;
-height:24px;
-background:url("Instagramlogo.jpg") center/contain no-repeat;
+width:28px;
+height:28px;
+border-radius:8px;
+background:url("Instagramlogo.jpg") center/134% 134% no-repeat;
 flex-shrink:0;
+overflow:hidden;
 }
 
 .instagram-logo{
@@ -1403,10 +1405,12 @@ display:none;
 .footer-instagram::before{
 content:"";
 display:inline-block;
-width:104px;
-height:24px;
-background:url("Instagramlogo.jpg") center/contain no-repeat;
+width:28px;
+height:28px;
+border-radius:8px;
+background:url("Instagramlogo.jpg") center/134% 134% no-repeat;
 flex-shrink:0;
+overflow:hidden;
 }
 
 .footer-instagram::after{
