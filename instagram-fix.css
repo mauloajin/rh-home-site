@@ -1,0 +1,17 @@
+.instagram-text::after{
+content:"Instagramでもご紹介しています。";
+display:inline-block;
+min-height:0;
+padding-left:0;
+background:none;
+font-size:15px;
+line-height:2.2;
+}
+
+.instagram-button::before,
+.footer-instagram::before{
+width:34px;
+height:34px;
+border-radius:10px;
+background:url("Instagramlogo.jpg") center/100% 100% no-repeat;
+}
