@@ -972,7 +972,7 @@ padding:145px 5%;
 text-align:center;
 background:
 linear-gradient(rgba(0,0,0,.72),rgba(0,0,0,.82)),
-url("room.jpg") center/cover no-repeat;
+url("main.jpg") center/cover no-repeat;
 color:#fff;
 }
 
@@ -1256,6 +1256,11 @@ height:46px;
 
 .footer-tel{
 font-size:24px;
+}
+
+.section-title h2{
+font-size:32px;
+letter-spacing:.06em;
 }
 
 .works-lead{
