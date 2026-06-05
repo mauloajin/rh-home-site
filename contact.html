@@ -5,8 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>お問い合わせ｜株式会社アールエイチホーム</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css?v=logo-fix">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Noto+Serif+JP:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css?v=site-fix-2">
 </head>
 
 <body>
@@ -18,7 +18,13 @@
 <span>株式会社アールエイチホーム</span>
 </a>
 
-<nav class="nav">
+<button class="menu-toggle" type="button" aria-label="メニューを開く" aria-expanded="false" aria-controls="siteNav">
+<span></span>
+<span></span>
+<span></span>
+</button>
+
+<nav class="nav" id="siteNav">
 <a href="index.html">ホーム</a>
 <a href="service.html">事業内容</a>
 <a href="works.html">施工事例</a>
@@ -135,23 +141,44 @@ required
 
 <footer class="footer">
 
-<div>
-<div class="footer-logo"><img src="rh-logo.png" alt="RH HOME" class="logo-mark"></div>
+<div class="footer-inner">
 
+<div class="footer-brand">
+<div class="footer-logo"><img src="rh-logo.png" alt="RH HOME" class="logo-mark"></div>
 <p>
 株式会社アールエイチホーム<br>
-リフォーム・リノベーション
-</p>
-</div>
-
-<div>
-<p>
-TEL：0120-897-390<br>
+リフォーム・リノベーション / 店舗内装工事<br>
 神奈川県を中心に関東エリア対応
 </p>
 </div>
 
+<div class="footer-contact">
+<a href="tel:0120897390" class="footer-tel">0120-897-390</a>
+<a href="https://www.instagram.com/rhhome_yamato/" target="_blank" class="footer-instagram">
+Instagram　@rhhome_yamato
+</a>
+</div>
+
+</div>
+
+<div class="footer-bottom">
+© RH HOME All Rights Reserved.
+</div>
+
 </footer>
+
+<script>
+const menuToggle = document.querySelector(".menu-toggle");
+const siteNav = document.getElementById("siteNav");
+
+if(menuToggle && siteNav){
+menuToggle.addEventListener("click",function(){
+const isOpen = siteNav.classList.toggle("open");
+menuToggle.classList.toggle("open",isOpen);
+menuToggle.setAttribute("aria-expanded",isOpen ? "true" : "false");
+});
+}
+</script>
 
 </body>
 </html>
