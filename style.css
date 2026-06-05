@@ -373,6 +373,139 @@ color:#d4d4d4;
 }
 
 /* =========================
+PAGE HERO
+========================= */
+
+.page-hero{
+min-height:420px;
+position:relative;
+display:flex;
+flex-direction:column;
+align-items:center;
+justify-content:center;
+text-align:center;
+padding:140px 5% 80px;
+overflow:hidden;
+color:#fff;
+}
+
+.page-hero::before{
+content:"";
+position:absolute;
+inset:0;
+background:
+linear-gradient(rgba(0,0,0,.62),rgba(0,0,0,.76)),
+url("main.jpg") center/cover no-repeat;
+transform:scale(1.04);
+}
+
+.company-hero::before{
+background:
+linear-gradient(rgba(0,0,0,.58),rgba(0,0,0,.78)),
+url("exterior.jpg") center/cover no-repeat;
+}
+
+.page-hero small,
+.page-hero h1{
+position:relative;
+z-index:1;
+}
+
+.page-hero small{
+display:block;
+font-size:14px;
+letter-spacing:.32em;
+color:#b8a46a;
+margin-bottom:18px;
+}
+
+.page-hero h1{
+font-size:clamp(38px,5vw,64px);
+font-weight:500;
+letter-spacing:.14em;
+}
+
+/* =========================
+COMPANY
+========================= */
+
+.company-section{
+background:#f5f2eb;
+color:#111;
+padding:110px 5% 120px;
+}
+
+.company-section::before{
+display:none;
+}
+
+.company-intro{
+max-width:980px;
+margin:0 auto 70px;
+text-align:center;
+}
+
+.company-intro small{
+display:block;
+font-size:13px;
+letter-spacing:.3em;
+color:#b8a46a;
+margin-bottom:20px;
+}
+
+.company-intro h2{
+font-size:38px;
+font-weight:500;
+line-height:1.8;
+letter-spacing:.08em;
+margin-bottom:32px;
+}
+
+.company-intro p{
+font-size:15px;
+line-height:2.45;
+color:#444;
+margin-bottom:20px;
+}
+
+.company-table{
+max-width:980px;
+margin:0 auto;
+background:#fff;
+border:1px solid #e2dacd;
+box-shadow:0 18px 48px rgba(0,0,0,.08);
+}
+
+.company-row{
+display:grid;
+grid-template-columns:220px 1fr;
+border-bottom:1px solid #e8e0d3;
+}
+
+.company-row:last-child{
+border-bottom:none;
+}
+
+.company-head{
+display:flex;
+align-items:center;
+padding:24px 28px;
+background:#201f1d;
+color:#b8a46a;
+font-size:14px;
+font-weight:600;
+letter-spacing:.12em;
+}
+
+.company-data{
+padding:24px 34px;
+font-size:15px;
+line-height:2.1;
+color:#222;
+background:#fff;
+}
+
+/* =========================
 CONCEPT
 ========================= */
 
@@ -702,6 +835,52 @@ font-size:24px;
 .service-text p{
 font-size:13px;
 line-height:2.1;
+}
+
+.page-hero{
+min-height:330px;
+padding:120px 5% 65px;
+}
+
+.page-hero h1{
+font-size:38px;
+}
+
+.company-section{
+padding:80px 5% 90px;
+}
+
+.company-intro{
+text-align:left;
+margin-bottom:46px;
+}
+
+.company-intro h2{
+font-size:26px;
+line-height:1.75;
+}
+
+.company-intro p{
+font-size:13px;
+line-height:2.2;
+}
+
+.company-table{
+box-shadow:0 12px 30px rgba(0,0,0,.08);
+}
+
+.company-row{
+grid-template-columns:1fr;
+}
+
+.company-head{
+padding:16px 20px;
+}
+
+.company-data{
+padding:18px 20px 22px;
+font-size:14px;
+line-height:2;
 }
 
 .concept-section{
