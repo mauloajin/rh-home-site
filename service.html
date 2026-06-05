@@ -9,23 +9,206 @@
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Noto+Serif+JP:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 
+<style>
+body{
+background:#f5f2eb;
+color:#111;
+}
+
+.service-hero{
+height:520px;
+position:relative;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+color:#fff;
+overflow:hidden;
+}
+
+.service-hero::before{
+content:"";
+position:absolute;
+inset:0;
+background:
+linear-gradient(rgba(0,0,0,.58),rgba(0,0,0,.68)),
+url("service-hero.jpg") center/cover no-repeat;
+}
+
+.service-hero-inner{
+position:relative;
+z-index:2;
+padding-top:70px;
+}
+
+.service-hero small{
+display:block;
+font-size:15px;
+letter-spacing:.32em;
+color:#b8a46a;
+margin-bottom:18px;
+}
+
+.service-hero h1{
+font-size:64px;
+font-weight:500;
+letter-spacing:.12em;
+}
+
+.service-page{
+background:#f5f2eb;
+padding:95px 5% 110px;
+}
+
+.service-lead{
+max-width:980px;
+margin:0 auto 70px;
+text-align:center;
+}
+
+.service-lead small{
+display:block;
+font-size:14px;
+letter-spacing:.28em;
+color:#b8a46a;
+margin-bottom:22px;
+}
+
+.service-lead h2{
+font-size:40px;
+font-weight:500;
+line-height:1.75;
+letter-spacing:.06em;
+margin-bottom:26px;
+}
+
+.service-lead p{
+font-size:15px;
+line-height:2.4;
+color:#444;
+}
+
+.service-card-list{
+max-width:1180px;
+margin:0 auto;
+display:flex;
+flex-direction:column;
+gap:18px;
+}
+
+.service-card{
+background:#fff;
+border:1px solid #e2dacd;
+box-shadow:0 12px 32px rgba(0,0,0,.07);
+padding:34px 38px;
+display:grid;
+grid-template-columns:90px 1.05fr 1.4fr;
+gap:34px;
+align-items:center;
+}
+
+.service-number{
+font-family:"Bebas Neue",sans-serif;
+font-size:62px;
+line-height:1;
+color:#b8a46a;
+border-right:1px solid #d8cda9;
+}
+
+.service-content h3{
+font-size:25px;
+font-weight:600;
+letter-spacing:.08em;
+margin-bottom:10px;
+}
+
+.service-content p{
+font-size:14px;
+line-height:2.15;
+color:#444;
+}
+
+.service-menu{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:7px 24px;
+list-style:none;
+}
+
+.service-menu li{
+font-size:13px;
+line-height:1.9;
+color:#333;
+position:relative;
+padding-left:14px;
+}
+
+.service-menu li::before{
+content:"";
+position:absolute;
+left:0;
+top:12px;
+width:4px;
+height:4px;
+background:#b8a46a;
+border-radius:50%;
+}
+
+.service-note{
+max-width:900px;
+margin:70px auto 0;
+text-align:center;
+}
+
+.service-note p{
+font-size:15px;
+line-height:2.4;
+color:#444;
+}
+
+@media(max-width:1100px){
+.service-hero{
+height:420px;
+}
+
+.service-hero h1{
+font-size:42px;
+}
+
+.service-page{
+padding:75px 5% 90px;
+}
+
+.service-lead h2{
+font-size:28px;
+}
+
+.service-card{
+grid-template-columns:1fr;
+padding:28px 22px;
+gap:22px;
+}
+
+.service-number{
+border-right:none;
+border-bottom:1px solid #d8cda9;
+padding-bottom:12px;
+}
+
+.service-menu{
+grid-template-columns:1fr;
+}
+}
+</style>
 </head>
 
 <body>
 
 <header class="header" id="siteHeader">
-
-<div class="logo-wrap">
-
 <a href="index.html" class="logo">
-<img src="rh-logo.png" alt="RH HOME">
+RH HOME
+<span>株式会社アールエイチホーム</span>
 </a>
-
-<div class="logo-sub">
-株式会社アールエイチホーム
-</div>
-
-</div>
 
 <nav class="nav">
 <a href="index.html">ホーム</a>
@@ -35,59 +218,35 @@
 <a href="contact.html">お問い合わせ</a>
 </nav>
 
-<div class="tel">
-0120-897-390
-</div>
-
+<div class="tel">0120-897-390</div>
 </header>
 
 <section class="service-hero">
-
 <div class="service-hero-inner">
-
 <small>SERVICE</small>
-
 <h1>事業内容</h1>
-
 </div>
-
 </section>
 
-<section class="service-intro">
+<section class="service-page">
 
-<div class="service-intro-inner">
-
+<div class="service-lead">
 <small>SERVICE MENU</small>
-
-<h2>
-リフォーム・リノベーションなら、幅広く対応しています。
-</h2>
-
+<h2>リフォーム・リノベーションなら、幅広く対応しています。</h2>
 <p>
 住宅・マンション・店舗を問わず、内装工事から外装・外構、設備工事まで。<br>
 小さな修繕から大規模な改修まで、内容に合わせて柔軟に対応いたします。
 </p>
-
 </div>
 
-</section>
-
-<section class="service-list">
-
-<div class="service-list-inner">
+<div class="service-card-list">
 
 <div class="service-card">
-
 <div class="service-number">01</div>
-
 <div class="service-content">
 <h3>住宅・マンション工事</h3>
-<p>
-戸建住宅やマンションの改修、間取り変更、内装リフォームまで、
-暮らし方に合わせた住空間づくりを行います。
-</p>
+<p>戸建住宅やマンションの改修、間取り変更、内装リフォームまで、暮らし方に合わせた住空間づくりを行います。</p>
 </div>
-
 <ul class="service-menu">
 <li>フルリノベーション</li>
 <li>間取り変更</li>
@@ -97,21 +256,14 @@
 <li>収納造作</li>
 <li>建具交換</li>
 </ul>
-
 </div>
 
 <div class="service-card">
-
 <div class="service-number">02</div>
-
 <div class="service-content">
 <h3>水まわり工事</h3>
-<p>
-キッチン・浴室・トイレ・洗面など、
-毎日使う場所だからこそ、使いやすさと清潔感を大切に施工します。
-</p>
+<p>キッチン・浴室・トイレ・洗面など、毎日使う場所だからこそ、使いやすさと清潔感を大切に施工します。</p>
 </div>
-
 <ul class="service-menu">
 <li>キッチン交換</li>
 <li>浴室交換</li>
@@ -121,21 +273,14 @@
 <li>水道設備工事</li>
 <li>給排水工事</li>
 </ul>
-
 </div>
 
 <div class="service-card">
-
 <div class="service-number">03</div>
-
 <div class="service-content">
 <h3>内装工事</h3>
-<p>
-壁・床・天井・建具など、
-空間の印象を左右する内装工事に対応しています。
-</p>
+<p>壁・床・天井・建具など、空間の印象を左右する内装工事に対応しています。</p>
 </div>
-
 <ul class="service-menu">
 <li>壁紙・クロス張り替え</li>
 <li>床張り替え</li>
@@ -145,21 +290,14 @@
 <li>大工工事</li>
 <li>防音工事</li>
 </ul>
-
 </div>
 
 <div class="service-card">
-
 <div class="service-number">04</div>
-
 <div class="service-content">
 <h3>外装・外構工事</h3>
-<p>
-外壁・屋根・門まわり・フェンス・デッキなど、
-建物の印象と機能性を高める外まわりの工事にも対応しています。
-</p>
+<p>外壁・屋根・門まわり・フェンス・デッキなど、建物の印象と機能性を高める外まわりの工事にも対応しています。</p>
 </div>
-
 <ul class="service-menu">
 <li>外壁塗装</li>
 <li>屋根工事</li>
@@ -170,21 +308,14 @@
 <li>ウッドデッキ</li>
 <li>カーポート</li>
 </ul>
-
 </div>
 
 <div class="service-card">
-
 <div class="service-number">05</div>
-
 <div class="service-content">
 <h3>店舗・テナント工事</h3>
-<p>
-飲食店・サロン・美容室・スクールなど、
-業種やコンセプトに合わせた店舗空間を設計・施工します。
-</p>
+<p>飲食店・サロン・美容室・スクールなど、業種やコンセプトに合わせた店舗空間を設計・施工します。</p>
 </div>
-
 <ul class="service-menu">
 <li>店舗内装</li>
 <li>美容室内装</li>
@@ -195,21 +326,14 @@
 <li>パーテーション工事</li>
 <li>家具・什器工事</li>
 </ul>
-
 </div>
 
 <div class="service-card">
-
 <div class="service-number">06</div>
-
 <div class="service-content">
 <h3>設備・その他工事</h3>
-<p>
-電気・水道・サッシ・塗装・土木など、
-建物に関わる幅広い工事に対応しています。
-</p>
+<p>電気・水道・サッシ・塗装・土木など、建物に関わる幅広い工事に対応しています。</p>
 </div>
-
 <ul class="service-menu">
 <li>電気工事</li>
 <li>水道設備工事</li>
@@ -220,83 +344,51 @@
 <li>害虫・害獣駆除</li>
 <li>企画・設計・請負</li>
 </ul>
-
 </div>
 
 </div>
 
-</section>
-
-<section class="service-note">
-
+<div class="service-note">
 <p>
 上記以外の工事にも対応可能です。<br>
 「これも頼めるかな？」という内容でも、まずはお気軽にご相談ください。
 </p>
+</div>
 
 </section>
 
 <section class="cta">
-
 <h2>
 小さな工事から、<br>
 大規模な改修まで。
 </h2>
 
-<p>
-神奈川を中心に関東エリアで対応しております。
-</p>
+<p>神奈川を中心に関東エリアで対応しております。</p>
 
 <div class="buttons">
-
-<a href="tel:0120897390" class="btn primary">
-0120-897-390
-</a>
-
-<a href="contact.html" class="btn">
-お問い合わせフォーム
-</a>
-
+<a href="tel:0120897390" class="btn primary">0120-897-390</a>
+<a href="contact.html" class="btn">お問い合わせフォーム</a>
 </div>
-
 </section>
 
 <footer class="footer">
 
 <div class="footer-inner">
 
-<div class="footer-left">
-
-<img src="rh-logo.png" alt="RH HOME">
-
+<div class="footer-brand">
+<div class="footer-logo">RH HOME</div>
 <p>
 株式会社アールエイチホーム<br>
 リフォーム・リノベーション / 店舗内装工事<br>
 神奈川を中心に関東エリア対応
 </p>
-
-</div>
-
-<div class="footer-info">
-
-<p>
-住宅・マンション・店舗の改修、<br>
-内装工事から外構工事まで対応いたします。
-</p>
-
 </div>
 
 <div class="footer-contact">
-
-<a href="tel:0120897390" class="footer-tel">
-0120-897-390
-</a>
-
+<a href="tel:0120897390" class="footer-tel">0120-897-390</a>
 <a href="https://www.instagram.com/rhhome_yamato/" target="_blank" class="footer-instagram">
-<small>Instagram</small>
-<span>@rhhome_yamato</span>
+Instagram　@rhhome_yamato
 </a>
-
 </div>
 
 </div>
