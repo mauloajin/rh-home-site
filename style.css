@@ -62,9 +62,31 @@ font-weight:400;
 letter-spacing:.08em;
 line-height:1;
 white-space:nowrap;
+display:flex;
+flex-direction:column;
+align-items:flex-start;
+width:clamp(320px,30vw,420px);
 }
 
-.logo span{
+.logo-image-crop{
+display:block;
+width:100%;
+height:62px;
+overflow:hidden;
+position:relative;
+}
+
+.logo-mark{
+width:100%;
+height:auto;
+object-fit:contain;
+position:absolute;
+top:50%;
+left:0;
+transform:translateY(-50%);
+}
+
+.logo > span:not(.logo-image-crop){
 display:block;
 font-family:"Noto Serif JP",serif;
 font-size:11px;
@@ -721,6 +743,10 @@ font-weight:400;
 letter-spacing:.08em;
 margin-bottom:16px;
 line-height:1;
+width:min(430px,100%);
+height:68px;
+position:relative;
+overflow:hidden;
 }
 
 .footer-brand p{
@@ -787,9 +813,15 @@ padding:18px 5%;
 
 .logo{
 font-size:42px;
+width:270px;
+max-width:72vw;
 }
 
-.logo span{
+.logo-image-crop{
+height:42px;
+}
+
+.logo > span:not(.logo-image-crop){
 font-size:9px;
 }
 
@@ -934,6 +966,9 @@ align-items:flex-start;
 
 .footer-logo{
 font-size:42px;
+width:300px;
+max-width:82vw;
+height:48px;
 }
 
 .footer-tel{
