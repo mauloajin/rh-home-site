@@ -55,6 +55,23 @@ transition:transform .35s ease, background .35s ease;
 transform:translateY(-120%);
 }
 
+@supports (animation-timeline: scroll()){
+.header{
+animation:headerAutoHide linear both;
+animation-timeline:scroll(root);
+animation-range:120px 240px;
+}
+
+@keyframes headerAutoHide{
+from{
+transform:translateY(0);
+}
+to{
+transform:translateY(-120%);
+}
+}
+}
+
 .logo{
 font-family:"Bebas Neue",sans-serif;
 font-size:58px;
@@ -1109,6 +1126,27 @@ margin-bottom:28px;
 letter-spacing:.05em;
 }
 
+.instagram-text{
+font-size:0;
+}
+
+.instagram-text::before{
+content:"施工事例や日々の工事風景を";
+display:block;
+font-size:15px;
+line-height:2.2;
+}
+
+.instagram-text::after{
+content:"でもご紹介しています。";
+display:inline-block;
+min-height:24px;
+padding-left:116px;
+background:url("Instagramlogo.jpg") left center/104px auto no-repeat;
+font-size:15px;
+line-height:2.2;
+}
+
 .instagram-button{
 display:inline-flex;
 align-items:center;
@@ -1120,6 +1158,43 @@ text-decoration:none;
 font-size:15px;
 letter-spacing:.08em;
 transition:.3s;
+}
+
+.instagram-button > img{
+display:none;
+}
+
+.instagram-button::before{
+content:"";
+display:inline-block;
+width:104px;
+height:24px;
+background:url("Instagramlogo.jpg") center/contain no-repeat;
+flex-shrink:0;
+}
+
+.instagram-logo{
+width:auto;
+height:24px;
+max-width:112px;
+object-fit:contain;
+display:inline-block;
+vertical-align:middle;
+}
+
+.instagram-wordmark{
+display:inline-flex;
+align-items:center;
+vertical-align:middle;
+margin:0 4px;
+}
+
+.instagram-wordmark img{
+width:auto;
+height:24px;
+max-width:116px;
+object-fit:contain;
+display:block;
 }
 
 .instagram-button:hover{
@@ -1168,19 +1243,34 @@ FOOTER
 ========================= */
 
 .footer{
-background:#0f0f0f;
-border-top:1px solid rgba(255,255,255,.08);
+position:relative;
+background:
+radial-gradient(circle at 14% 0%,rgba(184,164,106,.18),transparent 36%),
+linear-gradient(135deg,#0b0b0b 0%,#17140f 52%,#080808 100%);
+border-top:1px solid rgba(184,164,106,.28);
 color:#fff;
+overflow:hidden;
+}
+
+.footer::after{
+content:"";
+position:absolute;
+left:0;
+right:0;
+top:0;
+height:1px;
+background:linear-gradient(90deg,transparent,rgba(184,164,106,.7),transparent);
 }
 
 .footer-inner{
-max-width:1200px;
+position:relative;
+max-width:1220px;
 margin:0 auto;
-padding:55px 5%;
-display:flex;
-justify-content:space-between;
-align-items:center;
-gap:40px;
+padding:64px 5%;
+display:grid;
+grid-template-columns:minmax(0,1.3fr) minmax(240px,.7fr);
+align-items:start;
+gap:46px;
 }
 
 .footer-logo{
@@ -1196,21 +1286,89 @@ position:relative;
 overflow:hidden;
 }
 
-.footer-brand p{
+.footer-brand p,
+.footer-lead{
 font-size:13px;
 line-height:2.1;
-color:#9f9f9f;
+color:#d0d0d0;
+}
+
+.footer-brand::after{
+content:"住宅リフォーム / 店舗内装 / リノベーション / 外構工事";
+display:inline-flex;
+margin-top:22px;
+border:1px solid rgba(184,164,106,.28);
+background:rgba(255,255,255,.04);
+color:#cdbd88;
+font-size:11px;
+letter-spacing:.08em;
+line-height:1.8;
+padding:8px 12px;
+}
+
+.footer-tags{
+display:flex;
+flex-wrap:wrap;
+gap:8px;
+margin-top:22px;
+}
+
+.footer-tags span{
+border:1px solid rgba(184,164,106,.28);
+background:rgba(255,255,255,.04);
+color:#cdbd88;
+font-size:11px;
+letter-spacing:.08em;
+padding:7px 11px;
+}
+
+.footer-links h3,
+.footer-contact-label{
+display:block;
+margin-bottom:18px;
+font-family:"Bebas Neue",sans-serif;
+font-size:24px;
+font-weight:400;
+letter-spacing:.14em;
+color:#b8a46a;
+line-height:1;
+}
+
+.footer-nav{
+display:grid;
+gap:11px;
+}
+
+.footer-nav a{
+color:#d8d8d8;
+font-size:13px;
+letter-spacing:.06em;
+text-decoration:none;
+transition:.25s;
+}
+
+.footer-nav a:hover{
+color:#b8a46a;
+transform:translateX(3px);
 }
 
 .footer-contact{
 display:flex;
 flex-direction:column;
-align-items:flex-end;
-gap:16px;
+align-items:flex-start;
+gap:12px;
+}
+
+.footer-contact p{
+margin:0;
+font-size:12px;
+line-height:1.8;
+letter-spacing:.06em;
+color:#a5a5a5;
 }
 
 .footer-tel{
-font-size:28px;
+font-size:30px;
 letter-spacing:.08em;
 color:#fff;
 text-decoration:none;
@@ -1222,25 +1380,62 @@ opacity:.7;
 }
 
 .footer-instagram{
+display:inline-flex;
+align-items:center;
+gap:10px;
+margin-top:2px;
+padding:10px 14px;
+border:1px solid rgba(184,164,106,.36);
+background:rgba(255,255,255,.035);
 font-size:14px;
 letter-spacing:.08em;
 color:#b8a46a;
 text-decoration:none;
 transition:.3s;
+font-size:0;
+}
+
+.footer-instagram img,
+.footer-instagram span{
+display:none;
+}
+
+.footer-instagram::before{
+content:"";
+display:inline-block;
+width:104px;
+height:24px;
+background:url("Instagramlogo.jpg") center/contain no-repeat;
+flex-shrink:0;
+}
+
+.footer-instagram::after{
+content:"@rhhome_yamato";
+font-size:14px;
+letter-spacing:.08em;
+color:#b8a46a;
 }
 
 .footer-instagram:hover{
-opacity:.7;
+background:rgba(184,164,106,.13);
+transform:translateY(-2px);
 }
 
 .footer-bottom{
-border-top:1px solid rgba(255,255,255,.06);
+position:relative;
+border-top:1px solid rgba(255,255,255,.07);
 padding:18px 5%;
 text-align:center;
 font-size:11px;
 letter-spacing:.12em;
-color:#777;
-background:#0f0f0f;
+color:#8f8466;
+background:rgba(0,0,0,.32);
+font-size:0;
+}
+
+.footer-bottom::after{
+content:"© RHHOME All Rights Reserved.";
+font-size:11px;
 }
 
 /* =========================
@@ -1442,14 +1637,19 @@ letter-spacing:.04em;
 }
 
 .footer-inner{
-flex-direction:column;
+grid-template-columns:1fr;
 align-items:flex-start;
-padding:45px 5%;
-gap:30px;
+padding:48px 5%;
+gap:34px;
 }
 
 .footer-contact{
 align-items:flex-start;
+}
+
+.footer-nav{
+grid-template-columns:repeat(2,minmax(0,1fr));
+column-gap:28px;
 }
 
 .footer-logo{
@@ -1459,8 +1659,18 @@ max-width:82vw;
 height:46px;
 }
 
+.footer-lead br{
+display:none;
+}
+
 .footer-tel{
 font-size:24px;
+}
+
+.instagram-logo,
+.instagram-wordmark img{
+height:22px;
+max-width:104px;
 }
 
 .section-title h2{
