@@ -5,8 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>会社概要｜株式会社アールエイチホーム</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css?v=logo-fix">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Noto+Serif+JP:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css?v=site-fix-2">
 </head>
 
 <body>
@@ -17,7 +17,13 @@
 <span>株式会社アールエイチホーム</span>
 </a>
 
-<nav class="nav">
+<button class="menu-toggle" type="button" aria-label="メニューを開く" aria-expanded="false" aria-controls="siteNav">
+<span></span>
+<span></span>
+<span></span>
+</button>
+
+<nav class="nav" id="siteNav">
 <a href="index.html">ホーム</a>
 <a href="service.html">事業内容</a>
 <a href="works.html">施工事例</a>
@@ -97,11 +103,6 @@
 </div>
 
 <div class="company-row">
-<div class="company-head">アクセス</div>
-<div class="company-data">大和駅 徒歩12分（小田急電鉄 / 相模鉄道）</div>
-</div>
-
-<div class="company-row">
 <div class="company-head">営業日</div>
 <div class="company-data">定休日無</div>
 </div>
@@ -156,6 +157,19 @@ Instagram　@rhhome_yamato
 </div>
 
 </footer>
+
+<script>
+const menuToggle = document.querySelector(".menu-toggle");
+const siteNav = document.getElementById("siteNav");
+
+if(menuToggle && siteNav){
+menuToggle.addEventListener("click",function(){
+const isOpen = siteNav.classList.toggle("open");
+menuToggle.classList.toggle("open",isOpen);
+menuToggle.setAttribute("aria-expanded",isOpen ? "true" : "false");
+});
+}
+</script>
 
 </body>
 </html>
