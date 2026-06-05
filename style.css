@@ -390,6 +390,7 @@ display:grid;
 grid-template-columns:1fr 1fr;
 gap:64px;
 align-items:center;
+color:inherit;
 }
 
 .service-row.reverse .service-image{
