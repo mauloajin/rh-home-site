@@ -7,7 +7,7 @@
 <title>株式会社アールエイチホーム｜神奈川・関東のリフォーム・リノベーション</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Noto+Serif+JP:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css?v=works-gallery-2">
+<link rel="stylesheet" href="style.css?v=site-fix-2">
 </head>
 
 <body>
@@ -18,7 +18,13 @@
 <span>株式会社アールエイチホーム</span>
 </a>
 
-<nav class="nav">
+<button class="menu-toggle" type="button" aria-label="メニューを開く" aria-expanded="false" aria-controls="siteNav">
+<span></span>
+<span></span>
+<span></span>
+</button>
+
+<nav class="nav" id="siteNav">
 <a href="index.html">ホーム</a>
 <a href="service.html">事業内容</a>
 <a href="works.html">施工事例</a>
@@ -40,12 +46,12 @@
 <div class="hero-line"></div>
 
 <h1>
-住まいと店舗に、<br>
+建物に、<br>
 新しい価値を。
 </h1>
 
 <p>
-神奈川県を中心に、住宅・マンション・店舗の
+首都圏を中心に、住宅・マンション・店舗・商業施設の
 リフォーム、リノベーション、内装工事を手掛けています。
 自社施工による丁寧なものづくりで、
 理想の空間づくりをサポートいたします。
@@ -311,7 +317,7 @@ class="instagram-button"
 <section class="cta">
 <h2>
 小さな工事から、<br>
-大規模リノベーションまで。
+<span class="cta-nowrap">大規模リノベーションまで。</span>
 </h2>
 
 <p>神奈川を中心に、関東エリアで幅広く対応しております。</p>
@@ -365,6 +371,17 @@ header.classList.remove("hide");
 
 lastScrollY = currentScrollY;
 });
+
+const menuToggle = document.querySelector(".menu-toggle");
+const siteNav = document.getElementById("siteNav");
+
+if(menuToggle && siteNav){
+menuToggle.addEventListener("click",function(){
+const isOpen = siteNav.classList.toggle("open");
+menuToggle.classList.toggle("open",isOpen);
+menuToggle.setAttribute("aria-expanded",isOpen ? "true" : "false");
+});
+}
 </script>
 
 </body>
