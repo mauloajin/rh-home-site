@@ -65,25 +65,30 @@ white-space:nowrap;
 display:flex;
 flex-direction:column;
 align-items:flex-start;
-width:clamp(320px,30vw,420px);
+width:260px;
+max-width:26vw;
+overflow:hidden;
+flex-shrink:0;
 }
 
 .logo-image-crop{
 display:block;
-width:100%;
-height:62px;
+width:260px;
+height:50px;
+max-width:100%;
 overflow:hidden;
 position:relative;
 }
 
 .logo-mark{
-width:100%;
+width:360px;
+max-width:none;
 height:auto;
 object-fit:contain;
 position:absolute;
 top:50%;
-left:0;
-transform:translateY(-50%);
+left:50%;
+transform:translate(-50%,-50%);
 }
 
 .logo > span:not(.logo-image-crop){
@@ -744,7 +749,7 @@ letter-spacing:.08em;
 margin-bottom:16px;
 line-height:1;
 width:min(430px,100%);
-height:68px;
+height:58px;
 position:relative;
 overflow:hidden;
 }
@@ -818,7 +823,12 @@ max-width:72vw;
 }
 
 .logo-image-crop{
-height:42px;
+width:220px;
+height:40px;
+}
+
+.logo-mark{
+width:300px;
 }
 
 .logo > span:not(.logo-image-crop){
@@ -968,7 +978,7 @@ align-items:flex-start;
 font-size:42px;
 width:300px;
 max-width:82vw;
-height:48px;
+height:46px;
 }
 
 .footer-tel{
