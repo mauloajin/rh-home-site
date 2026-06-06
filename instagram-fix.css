@@ -32,6 +32,35 @@ transform:translateY(-50%);
 object-position:left center;
 }
 
+.footer-brand p{
+font-size:0;
+line-height:0;
+}
+
+.footer-brand p::before{
+content:"株式会社アールエイチホーム";
+display:block;
+font-size:13px;
+line-height:2.1;
+color:#d0d0d0;
+}
+
+.footer-brand p::after{
+content:"ご相談から施工まで自社で一貫対応。\A余計な中間費用を抑え、丁寧な仕上がりを大切にしています。";
+display:block;
+white-space:pre-line;
+font-size:13px;
+line-height:2.1;
+color:#d0d0d0;
+}
+
+.footer-brand::after{
+content:"戸建住宅・マンション / 店舗・商業施設 / 外構・水回り / 小規模工事から大規模改修まで";
+display:inline-block;
+max-width:100%;
+white-space:normal;
+}
+
 @media(max-width:1100px){
 .logo > span:not(.logo-image-crop){
 width:220px;
@@ -68,6 +97,18 @@ border:1px solid rgba(255,255,255,.1);
 color:#fff;
 background:rgba(184,164,106,.16);
 border-color:rgba(184,164,106,.48);
+}
+
+.footer-brand p::before,
+.footer-brand p::after{
+font-size:13px;
+line-height:2.05;
+}
+
+.footer-brand::after{
+font-size:11px;
+line-height:1.9;
+padding:9px 12px;
 }
 }
 
