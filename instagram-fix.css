@@ -1,3 +1,7 @@
+.logo-mark{
+content:url("RH_HOME_uniform_spacing_less_distress_transparent.png");
+}
+
 .instagram-text::after{
 content:"Instagramでもご紹介しています。";
 display:inline-block;
